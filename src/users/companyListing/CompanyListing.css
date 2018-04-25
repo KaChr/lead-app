@@ -1,0 +1,39 @@
+.company-listing-main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.company-listing-city {
+    font-size: 14px;
+}
+
+.company-listing-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.company-listing-intern-positions {
+    font-size: 12px;
+}
+
+.company-listing-bold {
+    font-weight: bold;
+}
+
+.company-listing-background-yellow {
+    color: yellow;
+}
+
+.company-listing-icon {
+    font-size: 16px;
+    color: red;
+}
+
+.company-listing-link {
+    color: blue;
+    cursor: pointer;
+}
+
+.company-listing-link:hover {
+    text-decoration: underline;
+}

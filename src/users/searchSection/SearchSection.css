@@ -1,0 +1,15 @@
+.search-section-arrow-down {
+    font-size: 21px;
+}
+
+.search-section-color-gray {
+    color: gray;
+}
+
+#filter {
+    display: none;
+}
+
+#angle-up {
+    display: none;
+}
