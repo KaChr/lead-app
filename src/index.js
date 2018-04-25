@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
-import LoggedInUser from './users/LoggedInUser';
+import LoggedInUser from './users/loggedInUser/LoggedInUser';
 import CompanyAdvertisement from './companies/Company_advertisement';
 
 ReactDOM.render((
