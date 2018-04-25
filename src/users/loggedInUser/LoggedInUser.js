@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoggedInUser.css';
 import CompanyListing from '../companyListing/CompanyListing';
+import CompanyAdvertisement from '../../companies/Company_advertisement';
 import ModalWindow from '../modalWindow/ModalWindow';
 import Pagination from '../pagination/Pagination';
 import FilterListing from '../filterListing/FilterListing';
@@ -28,7 +29,7 @@ class LoggedInUser extends React.Component {
                 <Pagination />
                 
                 {/************** Modal Window ***************/}
-                <ModalWindow />
+                <ModalWindow component={<CompanyAdvertisement />} />
             </div>
         );
     }

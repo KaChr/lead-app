@@ -1,19 +1,22 @@
 import React from 'react';
 import './ModalWindow.css';
-import CompanyAdvertisement from '../../companies/Company_advertisement';
 
 class ModalWindow extends React.Component {
-    onModalClose() {
-        const modal = document.getElementById('myModal');
-        modal.style.display = "none";
-    }
-
     render() {
         return (
-            <div id="myModal" className="modal">
-                <div className="modal-content col-10">
-                    <span className="close text-right" onClick={this.onModalClose}>&times;</span>
-                    <CompanyAdvertisement />
+            <div className="modal fade" id="myModal">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div className="modal-body">
+                            {this.props.component}
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-danger" data-dismiss="modal">Stäng</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
