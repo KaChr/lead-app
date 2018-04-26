@@ -1,6 +1,9 @@
 #!/bin/bash
 source $PWD/bin/bash.sh
 
+execute docker rm $(docker ps -a -q) -f
+execute docker rmi $(docker images -q) -f
+
 execute docker-compose down
 
 execute rm -rf $PWD/.env $PWD/node_modules $PWD/src/Config
