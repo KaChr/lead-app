@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class CompanyAdvertisement extends React.Component {
     render() {
@@ -6,12 +7,16 @@ class CompanyAdvertisement extends React.Component {
             <div className="row">
                 <div className="col-12">
                     <h1 className="text-center">Company Advertisement</h1>
-                    <p>sdfgsdfg dsfgsdfg sdfgsdfg sdfgsdfg sdfg sdfg sdfg sdf gsdf gsd fg sdfg</p>
-                    <p>sdfgsdfg dsfgsdfg sdfgsdfg sdfgsdfg sdfg sdfg sdfg sdf gsdf gsd fg sdfg</p>
+                    <p>{this.props.getCompanyAdvertisement.val1}</p>
+                    <p>{this.props.getCompanyAdvertisement.val2}</p>
                 </div>
             </div>
         );
     }
 }
 
-export default CompanyAdvertisement;
+const mapStateToProps = (state) => {
+    return state;
+};
+
+export default connect(mapStateToProps)(CompanyAdvertisement);
