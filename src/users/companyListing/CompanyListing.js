@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getCompanyAdvertisementAction } from '../../actions/navbarAction';
+import { getCompanyAdvertisementAction } from '../../actions/companyAdvertisementAction';
 import './CompanyListing.css';
 
 class CompanyListing extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoggedInUser.css';
 import CompanyListing from '../companyListing/CompanyListing';
-import CompanyAdvertisement from '../../companies/Company_advertisement';
+import CompanyAdvertisement from '../../companies/CompanyAdvertisement';
 import ModalWindow from '../modalWindow/ModalWindow';
 import Pagination from '../pagination/Pagination';
 import FilterListing from '../filterListing/FilterListing';
@@ -15,20 +15,10 @@ class LoggedInUser extends React.Component {
                     <div className="col-12 mb-3 logged-in-user-header">Logged In User</div>
                     <div className="col-12 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor optio minima nihil ut dolorum quaerat est tempore, nobis quia aliquid. Quisquam fugit porro nam consectetur maxime quae velit eius a?</div>
                 </div>
-
-                {/************** Search section *************/}
                 <SearchSection />
-
-                {/************** Filter section *************/}
                 <FilterListing />
-                
-                {/************** Company section ************/}
                 <CompanyListing />
-
-                {/************** Pagination *****************/}
                 <Pagination />
-                
-                {/************** Modal Window ***************/}
                 <ModalWindow component={<CompanyAdvertisement />} />
             </div>
         );

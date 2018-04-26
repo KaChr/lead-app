@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import LoggedInUser from './users/loggedInUser/LoggedInUser';
-import CompanyAdvertisement from './companies/Company_advertisement';
+import CompanyAdvertisement from './companies/CompanyAdvertisement';
 import store from './store/store';
 
 ReactDOM.render((

@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import { initialState, getCompanyAdvertisementReducer } from '../reducers/showNavbarReducer';
+import { initialState, getCompanyAdvertisementReducer } from '../reducers/companyAdvertisementReducer';
 
 const allReducers = combineReducers({
     getCompanyAdvertisement: getCompanyAdvertisementReducer
