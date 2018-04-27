@@ -1,7 +1,20 @@
+html {
+    overflow: scroll;
+}
+
 #myModal .modal-dialog {
     -webkit-transform: translate(0,-50%);
     -o-transform: translate(0,-50%);
     transform: translate(0,-50%);
     top: 50%;
     margin: 0 auto;
+}
+
+.modal .modal-lg {
+    max-width: 90%;
+}
+
+.modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
 }
