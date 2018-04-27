@@ -2,7 +2,7 @@ import React from 'react';
 import './LoggedInUser.css';
 import CompanyListing from '../companyListing/CompanyListing';
 import CompanyAdvertisement from '../../companies/CompanyAdvertisement';
-import ModalWindow from '../modalWindow/ModalWindow';
+import ModalWindow from '../../modalWindow/ModalWindow';
 import Pagination from '../pagination/Pagination';
 import FilterListing from '../filterListing/FilterListing';
 import SearchSection from '../searchSection/SearchSection';

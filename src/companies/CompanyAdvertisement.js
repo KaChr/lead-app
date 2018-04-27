@@ -4,8 +4,8 @@ import './CompanyAdvertisement.css';
 
 class CompanyAdvertisement extends React.Component {
     render() {
-        // this.props.getCompanyAdvertisement.val1
-        // this.props.getCompanyAdvertisement.val2
+        // console.log(this.props.getCompanyAdvertisement.val1);
+        // console.log(this.props.getCompanyAdvertisement.val2);
         return (
             <div className="row">
                 <div className="col-12 mb-5 company-advertisement-main company-advertisement-background-3B3C47">Företags Logo</div>
@@ -26,12 +26,12 @@ class CompanyAdvertisement extends React.Component {
                         <div className="col-12 mb-3">Postkod</div>
                         <div className="col-12">Mail</div>
                     </div>
-                    <div className="col-12 pl-5"><button type="button" class="btn btn-danger btn-block mb-2">Alla bolag</button></div>
-                    <div className="col-12 pl-5"><button type="button" class="btn btn-danger btn-block mb-2">Favorit</button></div>
-                    <div className="col-12 pl-5 mb-5"><button type="button" class="btn btn-danger btn-block">Ansök</button></div>
+                    <div className="col-12 pl-5"><button type="button" className="btn btn-danger btn-block mb-2">Alla bolag</button></div>
+                    <div className="col-12 pl-5"><button type="button" className="btn btn-danger btn-block mb-2">Favorit</button></div>
+                    <div className="col-12 pl-5 mb-5"><button type="button" className="btn btn-danger btn-block">Ansök</button></div>
                 </div>
                 <div className="col-9">Antal visningar:</div>
-                <div className="col-3 pl-5 pr-4"><button type="button" class="btn btn-danger btn-block">Dela</button></div>
+                <div className="col-3 pl-5 pr-4"><button type="button" className="btn btn-danger btn-block">Dela</button></div>
             </div>
         );
     }
