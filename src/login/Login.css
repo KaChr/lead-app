@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 container, .container-small, .container-large {
     max-width: 500px !important;
 }
 
-container {
-    font-family: 'Times New Roman', Times, serif;
+.login-header, .login-paragraph, .login-btn-content {
+    margin-top: 40px;
+}
+
+.cancel-register {
+    color: #ccbebe;
+}
+
+.login-header, .login-paragraph, .login-page {
+    font-family: 'Roboto', sans-serif !important;
 }
 
 
@@ -17,9 +27,7 @@ container {
 
 .bg-transparent-black {
     background-color: rgba(0, 0, 0, 0.7);
-    padding-top: 40px;
-    height: 480px;
-    
+    height: 480px; 
 }
 
 
@@ -30,6 +38,11 @@ container {
     border-bottom: 1px solid rgb(256, 256, 256) !important;
     text-decoration: underline !important;
     border-radius: 0 !important;
+    margin-top: 40px;
+}
+
+.input-form::placeholder {
+    color: rgb(256, 256, 256) !important;
 }
 
 .form-control:focus { 
