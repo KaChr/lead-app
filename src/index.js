@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import LoggedInUser from './users/loggedInUser/LoggedInUser';
 import CompanyAdvertisement from './companies/CompanyAdvertisement';
 import store from './store/store';
+import Login from './login/Login';
 
 ReactDOM.render((
     <Provider store={store}>
@@ -16,6 +17,7 @@ ReactDOM.render((
                 <Route exact path="/" component={App} />
                 <Route path="/logged-in-user" component={LoggedInUser} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
+                <Route path="/login" component={Login} />
             </div>
         </BrowserRouter>
     </Provider>
