@@ -1,0 +1,6 @@
+{
+    "name": "EXOFRAME_NAME",
+    "project": "EXOFRAME_PROJECT",
+    "domain": "TRAEFIK_ENV",
+    "template": "dockerfile"
+}
