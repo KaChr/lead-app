@@ -36,12 +36,15 @@ container, .container-small, .container-large {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
     border-bottom: 1px solid rgb(256, 256, 256) !important;
-    text-decoration: underline !important;
     border-radius: 0 !important;
     margin-top: 40px;
 }
 
 .input-form::placeholder {
+    color: rgb(256, 256, 256) !important; 
+}
+
+.form-control {
     color: rgb(256, 256, 256) !important;
 }
 
