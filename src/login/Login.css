@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+container, .container-small, .container-large {
+    max-width: 500px !important;
+}
+
+.login-header, .login-paragraph, .login-btn-content {
+    margin-top: 40px;
+}
+
+.cancel-register {
+    color: #ccbebe;
+}
+
+.login-header, .login-paragraph, .login-page {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+
+.bg {
+    background-image: url(business-coffee-computer-601171.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(256, 256, 256);
+}
+
+.bg-transparent-black {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 480px; 
+}
+
+
+
+.input-form {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(256, 256, 256) !important;
+    border-radius: 0 !important;
+    margin-top: 40px;
+}
+
+.input-form::placeholder {
+    color: rgb(256, 256, 256) !important; 
+}
+
+.form-control {
+    color: rgb(256, 256, 256) !important;
+}
+
+.form-control:focus { 
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0) !important;
+}
+
