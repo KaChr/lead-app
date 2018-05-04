@@ -1,0 +1,20 @@
+header {
+    height: 60px;
+    background-color: #212333;
+    padding: 5px;
+}
+
+header .header__logo img {
+    float: left;
+    height: 65px;
+}
+
+header ul {
+        margin: 18px 10px 0 0;
+        float: right;
+}
+
+header ul li {
+    padding: 0 5px;
+    display: inline;
+}
