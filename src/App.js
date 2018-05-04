@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="landing-page">
-        <p>Place header here</p>
+        <Header />
         <div className="jumbo-tron">
           <h1 className="jumbo-tron-title">LIA-portalen</h1>
           <p className="jumbo-tron-description">Hitta din praktikplats lika lätt som ett, två, tre.</p>
-          <button type="button" class="btn btn-success btn-lg btn-block">Börja nu!</button>
+          <button type="button" className="btn btn-success btn-lg btn-block">Börja nu!</button>
         </div>
         <div className="row landing-page-easy-info">
           <div className="col-sm landing-page-easy-info_card">
@@ -33,10 +35,10 @@ class App extends Component {
           </div>
           <div className="col-sm landing-page-easy-info_card">
             <h3>Premium</h3>
-            <button type="button" class="btn btn-success">Gå med!</button>
+            <button type="button" className="btn btn-success">Gå med!</button>
           </div>
         </div>
-        <p>Place footer here</p>
+        <Footer />
       </div>
     );
   }
