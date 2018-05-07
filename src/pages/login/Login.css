@@ -18,7 +18,7 @@ container, .container-small, .container-large {
 
 
 .bg {
-    background-image: url(business-coffee-computer-601171.jpg);
+    background-image: url(./images/business-coffee-computer-601171.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
