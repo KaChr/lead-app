@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
 
 class App extends Component {
   render() {
@@ -10,6 +8,7 @@ class App extends Component {
       <div className="landing-page">
         <Header />
         <div className="jumbotron">
+
           <h1 className="jumbo-tron-title">LIA-portalen</h1>
           <p className="jumbo-tron-description">Hitta din praktikplats lika lätt som ett, två, tre.</p>
           <button type="button" className="btn btn-success btn-lg">Börja nu!</button>
@@ -46,7 +45,6 @@ class App extends Component {
             <button type="button" className="btn btn-success">Gå med!</button>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
