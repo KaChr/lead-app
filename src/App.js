@@ -6,7 +6,6 @@ class App extends Component {
   render() {
     return (
       <div className="landing-page">
-        <Header />
         <div className="jumbotron">
 
           <h1 className="jumbo-tron-title">LIA-portalen</h1>
@@ -33,7 +32,7 @@ class App extends Component {
         <div className="row landing-page-easy-info-premium">
           <div className="col-sm landing-page-easy-info_card">
             <h3>Varför gå med i Premium som företag?</h3>
-            <p className="page-text">Börja med att registrera ett konto hos oss, fyll sedan i din profil.</p>
+            <p className="page-text">Som premiumanvändare har du möjlighet att:</p>
             <ul className="page-list">
               <li>Söka på skolor</li>
               <li>Söka på elever</li>
