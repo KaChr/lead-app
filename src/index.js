@@ -11,7 +11,7 @@ import store from './store/store';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Login from './login/Login';
+import Login from './pages/login/Login';
 
 ReactDOM.render((
     <Provider store={store}>
