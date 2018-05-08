@@ -1,16 +1,16 @@
 import React from 'react';
-import './Login.css';
+import './RegisterPage.css';
 
-class Login extends React.Component {
+class RegisterPage extends React.Component {
     render() {
         return (
-            <div className="login-page bg d-flex align-items-center">
+            <div className="register-page bg d-flex align-items-center">
                 <div className="container container-small bg-transparent-black">
                     <div className="row justify-content-center">
                         <div className="col-10">
-                            <h1 className="text-center login-header">Logga In</h1>
-                            <form className="login-form" method="post">
-                                <input type="text" className="input-form form-control" placeholder="Email" />
+                            <h1 className="text-center login-header">Registrera dig</h1>
+                            <form className="login-form">
+                                <input type="text" className=" input-form form-control" placeholder="Email" />
                                 <input type="password" className="input-form form-control" placeholder="Lösenord" />
                                 <p className="login-paragraph">Har du inget konto? Registrera dig <a href="register.html">Här</a>.</p>
                                 <div className="justify-content-center text-center login-btn-content">
@@ -30,4 +30,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default RegisterPage;
