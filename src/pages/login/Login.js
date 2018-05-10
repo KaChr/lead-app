@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import './Login.css';
 
 
@@ -11,14 +11,18 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
-            password: '',
+            email: 'superadmin@email.com',
+            password: 'password',
             errorMessages: []
         };
 
         this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
     }
+
+
+
+
 
     onSubmit(event) {
         console.log(event.target);
@@ -34,6 +38,20 @@ class Login extends React.Component {
             errorMessages.push('Password is required')
         }
 
+        axios.post('http://localhost:7770/login-student', {
+
+            "email": this.state.email,
+            "password": this.state.password
+        })
+            .then((res) => {
+                //console.log(res.data)
+                localStorage.setItem('token', res.data.token);
+
+
+            })
+            .catch((err) => {
+                console.log(err)
+            })
 
         this.setState({
             errorMessages: errorMessages
