@@ -6,8 +6,15 @@ import ModalWindow from '../../modalWindow/ModalWindow';
 import Pagination from '../pagination/Pagination';
 import FilterListing from '../filterListing/FilterListing';
 import SearchSection from '../searchSection/SearchSection';
+import { Authorization } from '../../Components/Helper/Authorization';
 
 class LoggedInUser extends React.Component {
+
+
+    componentDidMount() {
+        Authorization();
+    }
+
     render() {
         return (
             <div className="container logged-in-user">
