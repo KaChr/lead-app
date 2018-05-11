@@ -22,3 +22,6 @@
     background-color:rgb(256, 256, 256);
 }
 
+.companyProfile__container--height {
+    height: 150vh;
+}
