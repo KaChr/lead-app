@@ -2,34 +2,34 @@ import React from 'react';
 import companyExampleBanner from "../images/companyExampleBanner.jpg";
 import companyExampleLogo from '../images/companyExampleLogo.png';
 import './CompanyProfile.css';
+import CompanyProfileDescription from './CompanyProfileDescription';
 
-
+ 
 class CompanyProfile extends React.Component {
     render() {
         return(
             <div>
-                <div>
-                    <img src={companyExampleBanner} width="100%"/>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <img src={companyExampleLogo} width="300"/>
-                        </div>
-                        
-                        <div className="col">
-                            <h2>My Company</h2>
-                            <p>Stad: </p>
-                            <p>Adress: </p>
-                            <p>E-mail: </p>
-                            <p>Hemsida: </p>
-                        </div>
+                <div className="companyProfile__banner"></div>
+                <div className="container shadow company-profile__container">
+                    <div className="row border-bottom">
+                        {/* <div className="col-4">
+                            <img className
+                            ="companyProfile__logo" src={companyExampleLogo}/>
+                        </div> */}
+                        <div className="container" >
+                            <div className="row">
+                                <div className="companyProfile__logo--2 col-5 "></div>
+                                <ul className="col">
+                                    <li>My Company</li>
+                                    <li>Stad: </li>
+                                    <li>Adress: </li>
+                                    <li>E-mail: </li>
+                                    <li>Hemsida: </li>
+                                </ul>  
+                            </div>
+                        </div>                
                     </div>
-                    <div>
-                        <h2>Om oss</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies, libero luctus consectetur egestas, nulla eros tempus odio, sed lacinia sapien dui nec diam. Integer ut nunc magna. In eu enim felis. Cras neque eros, varius consequat arcu at, facilisis venenatis purus. Quisque at venenatis augue. Proin interdum ultrices efficitur. Maecenas ut mauris at dolor mollis euismod. </p>
-                        <p>Aenean risus massa, vulputate non fermentum id, venenatis nec tortor. Etiam dui turpis, consequat et dui dapibus, cursus iaculis erat. Mauris feugiat felis et nunc posuere elementum. Integer sapien justo, vulputate sit amet congue sed, pellentesque sit amet justo.</p>
-                    </div>
+                    <CompanyProfileDescription />
                 </div>
             </div>
         );
