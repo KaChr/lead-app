@@ -5,13 +5,13 @@
     height: 50vh;
 }
 
-.companyProfile__logo--2 {
+/* .companyProfile__logo--2 {
     background-image: url('../images/companyExampleLogo.png');
     background-repeat: no-repeat;
     background-position: cover;
     background-size: 100% 200px;
     height: 200px;
-}
+} */
 
 .companyProfile__logo {
     height: 200px;
