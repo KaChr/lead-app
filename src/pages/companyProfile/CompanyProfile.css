@@ -25,3 +25,12 @@
 .companyProfile__container--height {
     height: 130vh;
 }
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.ButtonEditProfile {
+    padding: 0px;
+}
