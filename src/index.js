@@ -12,6 +12,7 @@ import store from './store/store';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Login from './pages/login/Login';
+import ProfileCompanyEditPage from './pages/profileCompanyEditPage';
 
 ReactDOM.render((
     <Provider store={store}>
@@ -22,6 +23,7 @@ ReactDOM.render((
                 <Route path="/logged-in-student" component={LoggedInStudent} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
+                <Route path="/profile_company_edit" component={ProfileCompanyEditPage} />
                 <Footer />
             </div>
         </BrowserRouter>
