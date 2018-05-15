@@ -12,7 +12,7 @@ import store from './store/store';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Login from './pages/login/Login';
-import ProfileCompanyEditPage from './pages/profileCompanyEditPage';
+import ProfileCompanyEditPage from './pages/profileCompanyEditPage/ProfileCompanyEditPage';
 
 ReactDOM.render((
     <Provider store={store}>
