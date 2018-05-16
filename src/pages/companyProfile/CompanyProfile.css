@@ -1,0 +1,36 @@
+.companyProfile__banner {
+    background-image: url('../images/companyExampleBanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+/* .companyProfile__logo--2 {
+    background-image: url('../images/companyExampleLogo.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 200px;
+    height: 200px;
+} */
+
+.companyProfile__logo {
+    height: 200px;
+}
+
+.company-profile__container {
+    margin-top: -200px;
+    background-color:rgb(256, 256, 256);
+}
+
+.companyProfile__container--height {
+    height: 130vh;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.ButtonEditProfile {
+    padding: 0px;
+}
