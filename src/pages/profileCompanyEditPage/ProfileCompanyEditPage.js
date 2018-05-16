@@ -8,39 +8,39 @@ class ProfileCompanyEditPage extends React.Component {
                 <form className="">
                     <div className="form-group">
                         <label for="">Ladda upp backgrundsbild:</label>
-                        <input className="form-control form__input--black" type="file"/>
+                        <input className="form-control form__input--black" name="website" type="file"/>
                     </div>
                     <div className="form-group">
                         <label for="">Ladda upp logotyp:</label>
-                        <input className="form-control form__input--black" type="file"/>
+                        <input className="form-control form__input--black" name="website" type="file"/>
                     </div>
                     <div className="form-group">
-                        <label for="companyName">Företagsname:</label>
-                        <input className="form-control form__input--black" id="companyName" type="text" value=""/>
+                        <label for="companyNameId">Företagsname:</label>
+                        <input className="form-control form__input--black" name="companyName" id="companyNameId" type="text" value=""/>
                     </div>
                     <div className="form-group">
-                        <label for="aboutCompany">Om företaget:</label>
-                        <textarea className="form-control form__input--black" id="aboutCompany"></textarea>    
+                        <label for="aboutCompanyId">Om företaget:</label>
+                        <textarea className="form-control form__input--black" name="aboutCompany" id="aboutCompanyId"></textarea>    
                     </div>
                     <div className="form-group">
-                        <label for="city">Stad:</label>
-                        <input className="form-control form__input--black" id="city" type="text" value="dsfsdfjjj"/>    
+                        <label for="cityId">Stad:</label>
+                        <input className="form-control form__input--black" name="city" id="cityId" type="text" value="dsfsdfjjj"/>    
                     </div>
                     <div className="form-group">
-                        <label for="adress">Adress:</label>
-                        <input className="form-control form__input--black" id="adress" type="text" value=""/>    
+                        <label for="adressId">Adress:</label>
+                        <input className="form-control form__input--black" name="adress" id="adressId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
-                        <label for="postalcode">Postadress:</label>
-                        <input className="form-control form__input--black" id="postalcode" type="text" value=""/>    
+                        <label for="postalcodeId">Postadress:</label>
+                        <input className="form-control form__input--black" name="postalcode" id="postalcodeId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
-                        <label for="e-mail">E-mail:</label>
-                        <input className="form-control form__input--black" id="e-mail" type="text" value=""/>    
+                        <label for="e-mailId">E-mail:</label>
+                        <input className="form-control form__input--black" name="e-mail" id="e-mailId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
-                        <label for="website">Hemsida:</label>
-                        <input className="form-control form__input--black" id="website" type="text" value=""/>    
+                        <label for="websiteId" >Hemsida:</label>
+                        <input className="form-control form__input--black" name="website" id="websiteId" type="text" value=""/>    
                     </div>
                     <div>
                         <button className="btn btn-success" type="submit">Spara</button>
