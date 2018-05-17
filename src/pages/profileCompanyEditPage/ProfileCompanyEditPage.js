@@ -2,17 +2,34 @@ import React from 'react';
 import './ProfileCompanyEditPage.css';
 
 class ProfileCompanyEditPage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            companyName: '',
+            companyName: '',
+            city: '',
+            adress: '',
+            postalcode: '',
+            email: '',
+            website: ''
+
+        }
+    }
+
+    
+
     render() {
         return(
             <div className="container">
                 <form className="">
                     <div className="form-group">
                         <label for="">Ladda upp backgrundsbild:</label>
-                        <input className="form-control form__input--black" name="website" type="file"/>
+                        <input className="form-control form__input--black" name="" type="file"/>
                     </div>
                     <div className="form-group">
                         <label for="">Ladda upp logotyp:</label>
-                        <input className="form-control form__input--black" name="website" type="file"/>
+                        <input className="form-control form__input--black" name="" type="file"/>
                     </div>
                     <div className="form-group">
                         <label for="companyNameId">Företagsname:</label>
@@ -24,7 +41,7 @@ class ProfileCompanyEditPage extends React.Component {
                     </div>
                     <div className="form-group">
                         <label for="cityId">Stad:</label>
-                        <input className="form-control form__input--black" name="city" id="cityId" type="text" value="dsfsdfjjj"/>    
+                        <input className="form-control form__input--black" name="city" id="cityId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
                         <label for="adressId">Adress:</label>
@@ -35,8 +52,8 @@ class ProfileCompanyEditPage extends React.Component {
                         <input className="form-control form__input--black" name="postalcode" id="postalcodeId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
-                        <label for="e-mailId">E-mail:</label>
-                        <input className="form-control form__input--black" name="e-mail" id="e-mailId" type="text" value=""/>    
+                        <label for="emailId">E-mail:</label>
+                        <input className="form-control form__input--black" name="email" id="emailId" type="text" value=""/>    
                     </div>
                     <div className="form-group">
                         <label for="websiteId" >Hemsida:</label>
