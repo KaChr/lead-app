@@ -7,7 +7,7 @@ class ProfileCompanyEditPage extends React.Component {
 
         this.state = {
             companyName: '',
-            companyName: '',
+            aboutCompany: '',
             city: '',
             adress: '',
             postalcode: '',
@@ -15,6 +15,18 @@ class ProfileCompanyEditPage extends React.Component {
             website: ''
 
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        }) 
     }
 
     
@@ -22,7 +34,7 @@ class ProfileCompanyEditPage extends React.Component {
     render() {
         return(
             <div className="container">
-                <form className="">
+                <form onSubmit={this.handleSubmit} className="">
                     <div className="form-group">
                         <label for="">Ladda upp backgrundsbild:</label>
                         <input className="form-control form__input--black" name="" type="file"/>
@@ -33,34 +45,34 @@ class ProfileCompanyEditPage extends React.Component {
                     </div>
                     <div className="form-group">
                         <label for="companyNameId">Företagsname:</label>
-                        <input className="form-control form__input--black" name="companyName" id="companyNameId" type="text" value=""/>
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="companyName" id="companyNameId" type="text" value={this.state.companyName}/>
                     </div>
                     <div className="form-group">
                         <label for="aboutCompanyId">Om företaget:</label>
-                        <textarea className="form-control form__input--black" name="aboutCompany" id="aboutCompanyId"></textarea>    
+                        <textarea onChange={this.handleChange} className="form-control form__input--black" name="aboutCompany" id="aboutCompanyId" value={this.state.aboutCompany}></textarea>    
                     </div>
                     <div className="form-group">
                         <label for="cityId">Stad:</label>
-                        <input className="form-control form__input--black" name="city" id="cityId" type="text" value=""/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="city" id="cityId" type="text" value={this.state.city}/>    
                     </div>
                     <div className="form-group">
                         <label for="adressId">Adress:</label>
-                        <input className="form-control form__input--black" name="adress" id="adressId" type="text" value=""/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="adress" id="adressId" type="text" value={this.state.adress}/>    
                     </div>
                     <div className="form-group">
                         <label for="postalcodeId">Postadress:</label>
-                        <input className="form-control form__input--black" name="postalcode" id="postalcodeId" type="text" value=""/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="postalcode" id="postalcodeId" type="text" value={this.state.postalcode}/>    
                     </div>
                     <div className="form-group">
                         <label for="emailId">E-mail:</label>
-                        <input className="form-control form__input--black" name="email" id="emailId" type="text" value=""/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="email" id="emailId" type="text" value={this.state.email}/>    
                     </div>
                     <div className="form-group">
                         <label for="websiteId" >Hemsida:</label>
-                        <input className="form-control form__input--black" name="website" id="websiteId" type="text" value=""/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="website" id="websiteId" type="text" value={this.state.website}/>    
                     </div>
                     <div>
-                        <button className="btn btn-success" type="submit">Spara</button>
+                        <button className="btn btn-success" type="submit" value="Submit">Spara</button>
                         <button className="btn btn-danger">Avbryt</button>
                     </div>
                 </form>
