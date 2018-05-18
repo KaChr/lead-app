@@ -37,7 +37,7 @@ class Login extends React.Component {
         if (this.state.password === '') {
             errorMessages.push('Password is required')
         }
-            console.log(errorMessages);
+
         axios.post('http://localhost:7770/login-student', {
 
             "email": this.state.email,
@@ -52,7 +52,7 @@ class Login extends React.Component {
             .catch((err) => {
                 console.log(err)
             })
-            
+
         this.setState({
             errorMessages: errorMessages
         });
