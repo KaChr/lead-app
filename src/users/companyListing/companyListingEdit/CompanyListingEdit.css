@@ -1,9 +1,11 @@
 
 
-.company-listings-edit-container {
-    width: 50%;
-    margin-top: 20px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.company-listings-edit {
+    
+    margin: 0 auto;
+    float: none;
+}
+
+.button_function{
+    margin: 18px 10px 0 0;  
 }
