@@ -12,6 +12,7 @@ container, .container-small, .container-large {
     color: #ccbebe;
 }
 
+
 .login-header, .login-paragraph, .login-page {
     font-family: 'Roboto', sans-serif !important;
 }
@@ -45,7 +46,11 @@ container, .container-small, .container-large {
 }
 
 .form-control {
-    color: rgb(256, 256, 256) !important;
+    color: rgb(256, 256, 256);
+}
+
+.input-form--color--white {
+    color: rgb(256, 256, 256);
 }
 
 .form-control:focus { 
