@@ -14,7 +14,8 @@ class CompanyListingEdit extends React.Component {
             internAmount: '',
             city: '',
             adress: '',
-            mail: ''
+            mail: '',
+            errorMessages: []
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -25,19 +26,42 @@ class CompanyListingEdit extends React.Component {
         console.log(event.target);
         event.preventDefault();
 
+        const errorMessages = [];
+
+        if (this.state.companyName === '') {
+            errorMessages.push('Company name is required');
+        }
+        if (this.state.title === '') {
+            errorMessages.push('Title is required');
+        }
+        if (this.state.pubDate === '') {
+            errorMessages.push('Published date is required');
+        }
+        if (this.state.tasks === '') {
+            errorMessages.push('Tasks is required');
+        }
+        if (this.state.internAmount === '') {
+            errorMessages.push('Amount of intern is required');
+        }
+        if (this.state.city === '') {
+            errorMessages.push('City name is required');
+        }
+        if (this.state.adress === '') {
+            errorMessages.push('Adress is required');
+        }
+        if (this.state.mail === '') {
+            errorMessages.push('Mail is required');
+        }
+
+        this.setState({
+            errorMessages: errorMessages
+            
+        });
+
     }
 
     onChange(event) {
-        // this.setState({
-        //     companyName: event.target.companyName,
-        //     title: event.target.value,
-        //     pubDate: event.target.value,
-        //     tasks: event.target.value,
-        //     internAmount: event.target.value,
-        //     city: event.target.value,
-        //     adress: event.target.value,
-        //     mail: event.target.value
-        // });
+        
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -46,32 +70,35 @@ class CompanyListingEdit extends React.Component {
     render() {
         return (
             <div className="company-listings-edit-container">
+                {this.state.errorMessages.map((error)=>(
+                    <div key={error}>{error}</div>
+                ))}
                 <form onSubmit={this.onSubmit}>
-                    <div class="form-group">
-                        <input onChange={this.onChange} value={this.state.companyName} type="name" className="form-control" name="companyName" id="companyName" placeholder="Företags namn..." />
+                    <div className="form-group">
+                        <input onChange={this.onChange} value={this.state.companyName} type="name" className="form-control" name="companyName" id="companyName" placeholder="Företags namn..."/>
                     </div>
-                    <div class="form-group">
-                        <input onChange={this.onChange} value={this.state.title} type="title" class="form-control"name="title" id="title" placeholder="Titel..." />
+                    <div className="form-group">
+                        <input onChange={this.onChange} value={this.state.title} type="title" className="form-control"name="title" id="title" placeholder="Titel..."/>
                     </div>
-                    <div class="form-group">
-                        <input onChange={this.onChange} value={this.state.pubDate} type="pub" class="form-control"name="pubDate" id="pub" placeholder="Publikations datum..." />
+                    <div className="form-group">
+                        <input onChange={this.onChange} value={this.state.pubDate} type="pub" className="form-control"name="pubDate" id="pub" placeholder="Publikations datum..."/>
                     </div>
                     <div>
-                        <div class="form-group">
+                        <div className="form-group">
 
-                            <textarea onChange={this.onChange} value={this.state.tasks} class="form-control" name="tasks" placeholder="Information arbetsuppgifter..." rows="3"></textarea>
+                            <textarea onChange={this.onChange} value={this.state.tasks} className="form-control" name="tasks" placeholder="Information arbetsuppgifter..." rows="3"></textarea>
                         </div>
-                        <div class="form-group">
-                            <input onChange={this.onChange} value={this.state.internAmount} type="platser" class="form-control"name="internAmount" id="platser" placeholder="Antal platser..." />
+                        <div className="form-group">
+                            <input onChange={this.onChange} value={this.state.internAmount} type="platser" className="form-control"name="internAmount" id="platser" placeholder="Antal platser..." />
                         </div>
-                        <div class="form-group">
-                            <input onChange={this.onChange} value={this.state.city} type="ort" class="form-control" name="city" id="ort" placeholder="Ort..." />
+                        <div className="form-group">
+                            <input onChange={this.onChange} value={this.state.city} type="ort" className="form-control" name="city" id="ort" placeholder="Ort..." />
                         </div>
-                        <div class="form-group">
-                            <input onChange={this.onChange} value={this.state.adress} type="adress" class="form-control" name="adress" id="adress" placeholder="Adress..." />
+                        <div className="form-group">
+                            <input onChange={this.onChange} value={this.state.adress} type="adress" className="form-control" name="adress" id="adress" placeholder="Adress..." />
                         </div>
-                        <div class="form-group">
-                            <input onChange={this.onChange} value={this.state.mail} type="mail" class="form-control" name="mail" id="mail" placeholder="Mail..." />
+                        <div className="form-group">
+                            <input onChange={this.onChange} value={this.state.mail} type="mail" className="form-control" name="mail" id="mail" placeholder="Mail..." />
                         </div>
 
                     </div>
