@@ -80,7 +80,7 @@ class CompanyListingEdit extends React.Component {
                             <input onChange={this.onChange} value={this.state.companyName} type="name" className="form-control" name="companyName" id="companyName" placeholder="Företags namn..." />
                         </div>
                         <div className="form-group">
-                            <input onChange={this.onChange} value={this.state.title} type="title" className="form-control" name="title" id="title" placeholder="Titel..." />
+                            <input onChange={this.onChange} value={this.state.title} type="title" className="form-control" name="title" id="title" placeholder="Titel.." />
                         </div>
                         <div className="form-group">
                             <input onChange={this.onChange} value={this.state.pubDate} type="pub" className="form-control" name="pubDate" id="pub" placeholder="Publikations datum..." />
