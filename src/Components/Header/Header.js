@@ -6,15 +6,15 @@ import Button from '../Button/Button';
 
 const Header = () => {
     return (
-        <div>
-            <header>
+        <div className="row">
+            <header className="col-12">
                 <div className="header__logo">
-                    <a href="index.html"><img src={logo} alt="logo" /></a>
+                    <a href="/"><img src={logo} alt="logo" /></a>
                 </div>
 
                 <ul>
-                    <li><Button name="Login" /></li>
-                    <li><Button name="Register" /></li>
+                    <li><Button url="/login" name="Login" /></li>
+                    <li><Button url="/" name="Register" /></li>
                 </ul>
             </header>
         </div>

@@ -1,0 +1,29 @@
+.studentProfile__banner {
+    background-image: url('..//images/headerimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.studentProfile__logo--2 {
+    background-image: url('..//images/avatar-placeholder.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 40% 200px;
+    height: 200px;
+    position: relative;
+    left: 20%;
+}
+
+.studentProfile__logo {
+    height: 200px;
+}
+
+.student-profile__container {
+    margin-top: -200px;
+    background-color:rgb(256, 256, 256);
+}
+
+.studentProfile__container--height {
+    height: 130vh;
+}
