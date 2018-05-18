@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 
 class RegisterPage extends React.Component {
@@ -10,8 +11,8 @@ class RegisterPage extends React.Component {
             last_name: "",
             email: "",
             password: "",
-            social_security_number: ""
-            //errorMessages: []
+            social_security_number: "",
+            errorMessages: []
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -21,6 +22,29 @@ class RegisterPage extends React.Component {
     onSubmit(event) {
         console.log(event.target);
         event.preventDefault();
+
+        const errorMessages = [];
+
+        if (this.state.first_name === '') {
+            errorMessages.push('First name is required');
+        }
+
+        if (this.state.last_name === '') {
+            errorMessages.push('Last name is required');
+        }
+        if (this.state.email === '') {
+            errorMessages.push('Email name is required');
+        }
+        if (this.state.password === '') {
+            errorMessages.push('Password name is required');
+        }
+        if (this.state.social_security_number === '') {
+            errorMessages.push('Social security number name is required');
+        }
+
+        this.setState({
+            errorMessages: errorMessages
+        });
     }
 
     onChange(event) {
