@@ -23,7 +23,7 @@ ReactDOM.render((
                 <Route path="/logged-in-student" component={LoggedInStudent} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
-                <Route path="/registerpage" component={RegisterPage} />
+                <Route path="/register" component={RegisterPage} />
                 <Footer />
             </div>
         </BrowserRouter>
