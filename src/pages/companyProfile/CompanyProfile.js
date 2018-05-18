@@ -9,7 +9,7 @@ import ButtonProfileEdit from './ButtonProfileEdit';
 class CompanyProfile extends React.Component {
     render() {
         return(
-            <div className="container-fluid companyProfile__container--height">
+            <div className="container-fluid companyProfile__container--height companyProfile--nopadding">
                 <div className="companyProfile__banner">
                 <ButtonProfileEdit className=""></ButtonProfileEdit>    
                 </div>

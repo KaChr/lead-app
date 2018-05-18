@@ -5,14 +5,6 @@
     height: 50vh;
 }
 
-/* .companyProfile__logo--2 {
-    background-image: url('../images/companyExampleLogo.png');
-    background-repeat: no-repeat;
-    background-position: cover;
-    background-size: 100% 200px;
-    height: 200px;
-} */
-
 .companyProfile__logo {
     height: 200px;
 }
@@ -26,11 +18,7 @@
     height: 130vh;
 }
 
-.container-fluid {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-}
-
-.ButtonEditProfile {
-    padding: 0px;
+.companyProfile--nopadding {
+    padding-right: 0px;
+    padding-left: 0px;
 }
