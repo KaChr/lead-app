@@ -12,20 +12,30 @@ import store from './store/store';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Login from './pages/login/Login';
+<<<<<<< HEAD
 import ProfileCompanyEditPage from './pages/profileCompanyEditPage/ProfileCompanyEditPage';
 import CompanyProfile from './pages/companyProfile/CompanyProfile';
+=======
+import LoggedSchoolProfile from './pages/schools/LoggedSchoolProfile';
+import StudentProfile from './pages/StudentProfile/StudentProfile'
+>>>>>>> b5ae793a4035146b6166fc1204ef9701d05a7208
 
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
-            <div>
+            <div className="container-fluid">
                 <Header />
                 <Route exact path="/" component={App} />
                 <Route path="/logged-in-student" component={LoggedInStudent} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
+<<<<<<< HEAD
                 <Route path="/profile_company_edit" component={ProfileCompanyEditPage} />
                 <Route path="/company_profile" component={CompanyProfile} />
+=======
+                <Route path="/logged-in-school-profile" component={LoggedSchoolProfile} />
+                <Route path="/studentProfile" component={StudentProfile} />
+>>>>>>> b5ae793a4035146b6166fc1204ef9701d05a7208
                 <Footer />
             </div>
         </BrowserRouter>
