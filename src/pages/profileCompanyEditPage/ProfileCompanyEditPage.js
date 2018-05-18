@@ -1,6 +1,9 @@
 import React from 'react';
 import './ProfileCompanyEditPage.css';
 
+import Button_Danger from '../../Components/Button/Button_Danger/Button_Danger';
+import Button_Function from '../../Components/Button/Button_Function/Button_Function';
+
 class ProfileCompanyEditPage extends React.Component {
     constructor(props) {
         super(props);
@@ -72,8 +75,9 @@ class ProfileCompanyEditPage extends React.Component {
                         <input onChange={this.handleChange} className="form-control form__input--black" name="website" id="websiteId" type="text" value={this.state.website}/>    
                     </div>
                     <div>
-                        <button className="btn btn-success" type="submit" value="Submit">Spara</button>
-                        <button className="btn btn-danger">Avbryt</button>
+                        <Button_Danger button_danger_content="Avbryt" />
+                        <Button_Function button_content="Spara" />
+
                     </div>
                 </form>
             </div>

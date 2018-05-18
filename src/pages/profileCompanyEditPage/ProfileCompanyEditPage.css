@@ -1,21 +1,12 @@
 
-
-
-/* 
-.login-form-company-profile, .test {
-    color: rgb(0, 0 ,0 ) !important;
-}
-
-
-.login-form-company-profile::placeholder {
-    color: rgb(0, 0 ,0 ) !important; 
-}
- */
-
 .form__input--black {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(0, 0, 0);
 }
 
 .form__input--black::placeholder {
-    color: rgb(256, 256, 256) !important; 
+    color: rgb(256, 256, 256); 
+}
+
+.button-danger {
+    margin: 0 10px;
 }
