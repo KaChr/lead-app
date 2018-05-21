@@ -13,7 +13,8 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Login from './pages/login/Login';
 import LoggedSchoolProfile from './pages/schools/LoggedSchoolProfile';
-import StudentProfile from './pages/StudentProfile/StudentProfile'
+import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
+import StudentProfile from './pages/StudentProfile/StudentProfile';
 
 ReactDOM.render((
     <Provider store={store}>
