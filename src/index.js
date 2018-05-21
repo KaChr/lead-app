@@ -20,7 +20,7 @@ import StudentProfile from './pages/StudentProfile/StudentProfile';
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
-            <div className="container-fluid">
+            <div>
                 <Header />
                 <Route exact path="/" component={App} />
                 <Route path="/logged-in-student" component={LoggedInStudent} />
