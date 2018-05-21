@@ -74,8 +74,8 @@ class Login extends React.Component {
                         <div className="col-10">
                             <h1 className="text-center login-header">Logga In</h1>
                             <form onSubmit={this.onSubmit} className="login-form">
-                                <input onChange={this.onChange} value={this.state.email} type="email" className="input-form--color--white input-form form-control" name="email" placeholder="Email" />
-                                <input onChange={this.onChange} value={this.state.password} type="password" className="input-form form-control" name="password" placeholder="Lösenord" />
+                                <input onChange={this.onChange} value={this.state.email} type="email" className="input-form  input-form-test form-control input-form--color--white" name="email" placeholder="Email" />
+                                <input onChange={this.onChange} value={this.state.password} type="password" className="input-form input-form-test form-control input-form--color--white" name="password" placeholder="Lösenord" />
                                 <p className="login-paragraph">Har du inget konto? Registrera dig <a href="register.html">Här</a>.</p>
                                 <div className="justify-content-center text-center login-btn-content">
                                     <div className="col button">

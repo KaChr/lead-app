@@ -33,7 +33,15 @@ container, .container-small, .container-large {
 
 
 
-.input-form {
+/* .input-form {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(256, 256, 256) !important;
+    border-radius: 0 !important;
+    margin-top: 40px;
+} */
+
+.input-form-test {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
     border-bottom: 1px solid rgb(256, 256, 256) !important;
@@ -42,14 +50,14 @@ container, .container-small, .container-large {
 }
 
 .input-form::placeholder {
-    color: rgb(256, 256, 256) !important; 
-}
-
-.form-control {
-    color: rgb(256, 256, 256);
+    color: rgb(256, 256, 256); 
 }
 
 .input-form--color--white {
+    color: rgb(256, 256, 256);
+}
+
+.input-form--color--white:focus {
     color: rgb(256, 256, 256);
 }
 
