@@ -68,16 +68,15 @@ class ProfileCompanyEditPage extends React.Component {
                     </div>
                     <div className="form-group">
                         <label for="emailId">E-mail:</label>
-                        <input onChange={this.handleChange} className="form-control form__input--black" name="email" id="emailId" type="text" value={this.state.email}/>    
+                        <input onChange={this.handleChange} className="form-control form__input--black" name="email" id="emailId" type="email" value={this.state.email}/>    
                     </div>
                     <div className="form-group">
                         <label for="websiteId" >Hemsida:</label>
                         <input onChange={this.handleChange} className="form-control form__input--black" name="website" id="websiteId" type="text" value={this.state.website}/>    
                     </div>
                     <div>
-                        <Button_Danger button_danger_content="Avbryt" />
                         <Button_Function button_content="Spara" />
-
+                        <Button_Danger button_danger_content="Avbryt" />
                     </div>
                 </form>
             </div>
