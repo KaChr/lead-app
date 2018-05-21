@@ -77,7 +77,7 @@ class CompanyListing extends React.Component {
                         <button type="button" onClick={() => this.onModalButtonClick(company)} className="btn btn-link pl-0 pr-0 pt-0 pb-0" data-toggle="modal" data-target="#myModal"><span className="company-listing-main">{company.name}</span></button>
                         </div>
                         <div className="col-12 mt-2 company-listing-text-center company-listing-intern-positions">
-                            {company.information_listing}
+                            <div className="company-listing-max-text-length">{company.information_listing}</div>
                         </div>
                     </div>
                 </div>

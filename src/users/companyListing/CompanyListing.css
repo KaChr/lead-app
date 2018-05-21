@@ -51,8 +51,19 @@
     text-align: justify;
 }
 
+.company-listing-max-text-length {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @media only screen and (max-width: 575px) {
     .company-listing-text-center {
         text-align: center;
+    }
+
+    .company-listing-max-text-length {
+        width: 120px;
+        margin: auto;
     }
 }
