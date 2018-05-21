@@ -22,6 +22,7 @@ ReactDOM.render((
                 <Header />
                 <Route exact path="/" component={App} />
                 <Route path="/logged-in-student" component={LoggedInStudent} />
+                <Route path="/company_listing_edit" component={CompanyListingEdit} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
                 <Route path="/logged-in-school-profile" component={LoggedSchoolProfile} />
