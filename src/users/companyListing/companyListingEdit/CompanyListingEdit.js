@@ -35,7 +35,7 @@ class CompanyListingEdit extends React.Component {
             errorMessages.push('Title is required');
         }
         if (this.state.tasks === '') {
-            errorMessages.push('Tasks is required');
+            errorMessages.push('Task is required');
         }
         if (this.state.internAmount === '') {
             errorMessages.push('Amount of intern is required');

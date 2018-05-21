@@ -6,8 +6,8 @@ import Button from '../Button/Button';
 
 const Header = () => {
     return (
-        <div>
-            <header>
+        <div className="row">
+            <header className="col-12">
                 <div className="header__logo">
                     <a href="/"><img src={logo} alt="logo" /></a>
                 </div>
