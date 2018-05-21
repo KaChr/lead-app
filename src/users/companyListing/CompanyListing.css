@@ -37,3 +37,22 @@
 .company-listing-link:hover {
     text-decoration: underline;
 }
+
+.company-listing-logo-dimension {
+    width: 50px;
+    height: 50px;
+}
+
+.company-listing-text-center {
+    text-align: left;
+}
+
+.company-listing-text-justify {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 575px) {
+    .company-listing-text-center {
+        text-align: center;
+    }
+}
