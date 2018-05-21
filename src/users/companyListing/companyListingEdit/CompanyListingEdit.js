@@ -10,7 +10,6 @@ class CompanyListingEdit extends React.Component {
         this.state = {
             companyName: '',
             title: '',
-            pubDate: '',
             tasks: '',
             internAmount: '',
             city: '',
@@ -34,9 +33,6 @@ class CompanyListingEdit extends React.Component {
         }
         if (this.state.title === '') {
             errorMessages.push('Title is required');
-        }
-        if (this.state.pubDate === '') {
-            errorMessages.push('Published date is required');
         }
         if (this.state.tasks === '') {
             errorMessages.push('Tasks is required');
@@ -81,9 +77,6 @@ class CompanyListingEdit extends React.Component {
                         </div>
                         <div className="form-group">
                             <input onChange={this.onChange} value={this.state.title} type="title" className="form-control" name="title" id="title" placeholder="Titel..." />
-                        </div>
-                        <div className="form-group">
-                            <input onChange={this.onChange} value={this.state.pubDate} type="pub" className="form-control" name="pubDate" id="pub" placeholder="Publikations datum..." />
                         </div>
                         <div>
                             <div className="form-group">
