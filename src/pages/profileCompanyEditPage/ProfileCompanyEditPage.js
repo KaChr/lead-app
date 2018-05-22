@@ -37,7 +37,7 @@ class ProfileCompanyEditPage extends React.Component {
     render() {
         return(
             <div className="container profile-company-edit-page-container">
-                <form onSubmit={this.handleSubmit} className="col-9">
+                <form onSubmit={this.handleSubmit} className="col-md-8 col-sm-12">
                     <div className="form-group ">
                         <label for="">Ladda upp backgrundsbild:</label>
                         <input className="form-control form__input--black" name="" type="file"/>
