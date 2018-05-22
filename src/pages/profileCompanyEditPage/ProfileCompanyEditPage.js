@@ -36,9 +36,9 @@ class ProfileCompanyEditPage extends React.Component {
 
     render() {
         return(
-            <div className="container">
-                <form onSubmit={this.handleSubmit} className="">
-                    <div className="form-group">
+            <div className="container profile-company-edit-page-container">
+                <form onSubmit={this.handleSubmit} className="col-9">
+                    <div className="form-group ">
                         <label for="">Ladda upp backgrundsbild:</label>
                         <input className="form-control form__input--black" name="" type="file"/>
                     </div>
@@ -52,7 +52,7 @@ class ProfileCompanyEditPage extends React.Component {
                     </div>
                     <div className="form-group">
                         <label for="aboutCompanyId">Om företaget:</label>
-                        <textarea onChange={this.handleChange} className="form-control form__input--black" name="aboutCompany" id="aboutCompanyId" value={this.state.aboutCompany}></textarea>    
+                        <textarea onChange={this.handleChange} className="form-control form__input--black input-aboutCompany" name="aboutCompany" id="aboutCompanyId" value={this.state.aboutCompany}></textarea>    
                     </div>
                     <div className="form-group">
                         <label for="cityId">Stad:</label>

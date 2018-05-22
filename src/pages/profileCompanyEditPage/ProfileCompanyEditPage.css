@@ -10,3 +10,12 @@
 .button-danger {
     margin: 0 10px;
 }
+
+.profile-company-edit-page-container {
+    height: 100vh;
+    margin-top: 5%;
+}
+
+.input-aboutCompany {
+    height: 200px;
+}
