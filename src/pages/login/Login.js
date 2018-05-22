@@ -38,7 +38,7 @@ class Login extends React.Component {
             errorMessages.push('Password is required')
         }
 
-        axios.post('http://localhost:7770/login-student', {
+        axios.post('http://localhost:7770/login', {
 
             "email": this.state.email,
             "password": this.state.password
