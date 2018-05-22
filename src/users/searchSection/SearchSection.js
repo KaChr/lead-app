@@ -29,13 +29,13 @@ class SearchSection extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="col-9">
+                <div className="col-7">
                     <input type="text" className="form-control border border-danger" aria-describedby="searchField" placeholder="Sök" />
                 </div>
-                <div className="col-1">
+                <div className="col-2">
                     <button className="btn btn-outline-danger"><i className="fa fa-search search-section-color-gray"></i></button>
                 </div>
-                <div className="col-2">
+                <div className="col-3">
                     <div className="row">
                         <div className="col-12 text-center">
                             <button className="btn btn-danger" onClick={this.onShowFilter}>Filter</button>

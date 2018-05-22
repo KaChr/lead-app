@@ -15,15 +15,17 @@ import Login from './pages/login/Login';
 import ProfileCompanyEditPage from './pages/profileCompanyEditPage/ProfileCompanyEditPage';
 import CompanyProfile from './pages/companyProfile/CompanyProfile';
 import LoggedSchoolProfile from './pages/schools/LoggedSchoolProfile';
-import StudentProfile from './pages/StudentProfile/StudentProfile'
+import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
+import StudentProfile from './pages/StudentProfile/StudentProfile';
 
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
-            <div className="container-fluid">
+            <div>
                 <Header />
                 <Route exact path="/" component={App} />
                 <Route path="/logged-in-student" component={LoggedInStudent} />
+                <Route path="/company_listing_edit" component={CompanyListingEdit} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
                 <Route path="/profile_company_edit" component={ProfileCompanyEditPage} />
