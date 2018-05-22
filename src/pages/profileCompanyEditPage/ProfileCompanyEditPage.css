@@ -4,7 +4,7 @@
 }
 
 .form__input--black::placeholder {
-    color: rgb(256, 256, 256); 
+    color: rgb(0, 0, 0); 
 }
 
 .button-danger {
