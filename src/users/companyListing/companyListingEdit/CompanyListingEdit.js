@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Button_Danger from '../../../Components/Button/Button_Danger/Button_Danger';
 import Button_Function from '../../../Components/Button/Button_Function/Button_Function';
 import './CompanyListingEdit.css';
@@ -8,13 +9,13 @@ class CompanyListingEdit extends React.Component {
         super(props);
 
         this.state = {
-            companyName: '',
+            name: '',
             title: '',
-            tasks: '',
-            internAmount: '',
-            city: '',
-            adress: '',
-            mail: '',
+            information_listing: '',
+            intern_amount: '',
+            city_name: '',
+            street_address: '',
+            email: '',
             errorMessages: []
         };
 
@@ -28,25 +29,25 @@ class CompanyListingEdit extends React.Component {
 
         const errorMessages = [];
 
-        if (this.state.companyName === '') {
+        if (this.state.name === '') {
             errorMessages.push('Company name is required');
         }
         if (this.state.title === '') {
             errorMessages.push('Title is required');
         }
-        if (this.state.tasks === '') {
+        if (this.state.information_listing === '') {
             errorMessages.push('Task is required');
         }
-        if (this.state.internAmount === '') {
+        if (this.state.intern_amount === '') {
             errorMessages.push('Amount of intern is required');
         }
-        if (this.state.city === '') {
+        if (this.state.city_name === '') {
             errorMessages.push('City name is required');
         }
-        if (this.state.adress === '') {
+        if (this.state.street_address === '') {
             errorMessages.push('Adress is required');
         }
-        if (this.state.mail === '') {
+        if (this.state.email === '') {
             errorMessages.push('Mail is required');
         }
 
@@ -54,6 +55,24 @@ class CompanyListingEdit extends React.Component {
             errorMessages: errorMessages
 
         });
+
+        axios.post('http://localhost:7770/listings', {
+            
+            "name": this.state.name ,
+            "title": this.state.title,
+            "information_listing": this.state.information_listing,
+            "intern_amount": this.state.intern_amount,
+            "city_name": this.state.city_name,
+            "street_adress": this.state.street_address,
+            "email": this.state.email
+            
+      })
+      .then((response) => {
+        console.log(response,);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     }
 
@@ -63,6 +82,9 @@ class CompanyListingEdit extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+    
+    
+    
 
     render() {
         return (
@@ -73,7 +95,7 @@ class CompanyListingEdit extends React.Component {
                     ))}
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
-                            <input onChange={this.onChange} value={this.state.companyName} type="name" className="form-control" name="companyName" id="companyName" placeholder="Företags namn..." />
+                            <input onChange={this.onChange} value={this.state.name} type="name" className="form-control" name="name" id="companyName" placeholder="Företags namn..." />
                         </div>
                         <div className="form-group">
                             <input onChange={this.onChange} value={this.state.title} type="title" className="form-control" name="title" id="title" placeholder="Titel..." />
@@ -81,16 +103,16 @@ class CompanyListingEdit extends React.Component {
                         <div>
                             <div className="form-group">
 
-                                <textarea onChange={this.onChange} value={this.state.tasks} className="form-control" name="tasks" placeholder="Information arbetsuppgifter..." rows="3"></textarea>
+                                <textarea onChange={this.onChange} value={this.state.information_listing} className="form-control" name="information_listing" placeholder="Information arbetsuppgifter..." rows="3"></textarea>
                             </div>
                             <div className="form-group">
-                                <input onChange={this.onChange} value={this.state.internAmount} type="platser" className="form-control" name="internAmount" id="platser" placeholder="Antal platser..." />
+                                <input onChange={this.onChange} value={this.state.intern_amount} type="platser" className="form-control" name="intern_amount" id="platser" placeholder="Antal platser..." />
                             </div>
                             <div className="form-group">
                                 <input onChange={this.onChange} value={this.state.city} type="ort" className="form-control" name="city" id="ort" placeholder="Ort..." />
                             </div>
                             <div className="form-group">
-                                <input onChange={this.onChange} value={this.state.adress} type="adress" className="form-control" name="adress" id="adress" placeholder="Adress..." />
+                                <input onChange={this.onChange} value={this.state.street_address} type="adress" className="form-control" name="street_address" id="adress" placeholder="Adress..." />
                             </div>
                             <div className="form-group">
                                 <input onChange={this.onChange} value={this.state.mail} type="mail" className="form-control" name="mail" id="mail" placeholder="Mail..." />
