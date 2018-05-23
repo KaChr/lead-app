@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 container, .container-small, .container-large {
-    max-width: 500px !important;
+    max-width: 500px;
 }
 
 .login-header, .login-paragraph, .login-btn-content {
@@ -14,7 +14,7 @@ container, .container-small, .container-large {
 
 
 .login-header, .login-paragraph, .login-page {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 
