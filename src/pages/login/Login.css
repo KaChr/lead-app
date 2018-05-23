@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 container, .container-small, .container-large {
-    max-width: 500px !important;
+    max-width: 500px;
 }
 
 .login-header, .login-paragraph, .login-btn-content {
@@ -12,8 +12,9 @@ container, .container-small, .container-large {
     color: #ccbebe;
 }
 
+
 .login-header, .login-paragraph, .login-page {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -32,23 +33,27 @@ container, .container-small, .container-large {
 
 
 
-.input-form {
+ .input-form {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
     border-bottom: 1px solid rgb(256, 256, 256) !important;
     border-radius: 0 !important;
     margin-top: 40px;
-}
+} 
 
 .input-form::placeholder {
-    color: rgb(256, 256, 256) !important; 
+    color: rgb(256, 256, 256); 
 }
 
-.form-control {
-    color: rgb(256, 256, 256) !important;
+.input-form--color--white {
+    color: rgb(256, 256, 256);
+}
+
+.input-form--color--white:focus {
+    color: rgb(256, 256, 256);
 }
 
 .form-control:focus { 
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0);
 }
 

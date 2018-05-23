@@ -1,0 +1,23 @@
+
+.form__input--black {
+    color: rgb(0, 0, 0);
+}
+
+.form__input--black::placeholder {
+    color: rgb(0, 0, 0); 
+}
+
+.button-danger {
+    margin: 0 10px;
+}
+
+.profile-company-edit-page-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-aboutCompany {
+    height: 200px;
+}
