@@ -11,8 +11,8 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: 'superadmin@email.com',
-            password: 'password',
+            email: '',
+            password: '',
             errorMessages: []
         };
 
@@ -46,6 +46,33 @@ class Login extends React.Component {
             .then((res) => {
                 //console.log(res.data)
                 localStorage.setItem('token', res.data.token);
+
+                axios.post('http://localhost:7770/verify-token', null, {
+                    headers: {
+                        'Authorization': 'Bearer ' + res.data.token
+                    }
+
+                })
+                    .then((res2) => {
+                        console.log(res2.data);
+
+                        axios.get('http://localhost:7770/user-type/' + res2.data.userId)
+
+                            .then((res3) => {
+                                console.log(res3.data);
+                                // IF ELSE HERE TO REDIRECT TO THE CORRECT PAGE
+                                if (res3.data.role === 'student') {
+                                    this.props.history.push("/logged-in-student");
+                                }
+                            })
+                            .catch((err3) => {
+                                console.log(err3);
+                            })
+
+                    })
+                    .catch((err2) => {
+                        console.log(err2);
+                    })
 
 
             })
