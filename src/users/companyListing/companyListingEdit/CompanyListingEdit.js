@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Authorization} from '../../../Components/Helper/Authorization';
 import Button_Danger from '../../../Components/Button/Button_Danger/Button_Danger';
 import Button_Function from '../../../Components/Button/Button_Function/Button_Function';
 import './CompanyListingEdit.css';
@@ -21,8 +22,12 @@ class CompanyListingEdit extends React.Component {
         this.onChange = this.onChange.bind(this);
     }
 
+    componentDidMount() {
+        Authorization(this);
+    }
+
     onSubmit(event) {
-        console.log(event.target);
+        console.log('hejhehj');
         event.preventDefault();
 
         const errorMessages = [];
@@ -43,10 +48,51 @@ class CompanyListingEdit extends React.Component {
             errorMessages: errorMessages
 
         });
+        const token = localStorage.getItem('token');
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/verify-token`, null,{
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
+
+        .then((res) => {
+            console.log('Hej 2');
+            console.log(res.data);
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/user-type/${res.data.userId}`)
+
+            .then((res2) => {
+                console.log('hej 3')
+                console.log(res2.data.id);
+                axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
+            
+            
+                    "title": this.state.title,
+                    "pub_date":"2011-11-11",
+                    "information_listing": this.state.information_listing,
+                    "intern_amount": this.state.intern_amount,
+                    "company_id": res2.data.id 
+        
+                  
+              })
+              .then((res3) => {
+                console.log(res3);
+              })
+              .catch((error3) => {
+                console.log(error3);
+              });
+            })
+
+            .catch((error2) => {
+                console.log(error2);
+            })
+        })
+
+        .catch((error) => {
+            console.log(error);
+        })
         
 
-        const token = localStorage.getItem('token');
-        axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
+        /*axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
             
             
             "title": this.state.title,
@@ -68,7 +114,7 @@ class CompanyListingEdit extends React.Component {
       })
       .catch((error) => {
         console.log(error);
-      });
+      });*/
 
     }
 
