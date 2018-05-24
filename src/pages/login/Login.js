@@ -38,7 +38,7 @@ class Login extends React.Component {
             errorMessages.push('Password is required')
         }
 
-        axios.post('http://localhost:7770/login', {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/login`, {
 
             "email": this.state.email,
             "password": this.state.password
@@ -47,7 +47,7 @@ class Login extends React.Component {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token);
 
-                axios.post('http://localhost:7770/verify-token', null, {
+                axios.post(`${process.env.REACT_APP_API_BASE_URL}/verify-token`, null, {
                     headers: {
                         'Authorization': 'Bearer ' + res.data.token
                     }
@@ -56,7 +56,7 @@ class Login extends React.Component {
                     .then((res2) => {
                         console.log(res2.data);
 
-                        axios.get('http://localhost:7770/user-type/' + res2.data.userId)
+                        axios.get(`${process.env.REACT_APP_API_BASE_URL}/user-type/${res2.data.userId}`)
 
                             .then((res3) => {
                                 console.log(res3.data);
@@ -110,7 +110,7 @@ class Login extends React.Component {
                             <form onSubmit={this.onSubmit} className="login-form">
                                 <input onChange={this.onChange} value={this.state.email} type="email" className="input-form form-control input-form--color--white" name="email" placeholder="Email" />
                                 <input onChange={this.onChange} value={this.state.password} type="password" className="input-form form-control input-form--color--white" name="password" placeholder="Lösenord" />
-                                <p className="login-paragraph">Har du inget konto? Registrera dig <a href="register.html">Här</a>.</p>
+                                <p className="login-paragraph">Har du inget konto? Registrera dig <a href="/register">Här</a>.</p>
                                 <div className="justify-content-center text-center login-btn-content">
                                     <div className="col button">
                                         <input type="submit" value="Logga in" className="btn btn-danger"></input>
