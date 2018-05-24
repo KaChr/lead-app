@@ -20,6 +20,8 @@ import CompanyListingEdit from './users/companyListing/companyListingEdit/Compan
 import Student_Profile from './pages/StudentProfile/StudentProfile';
 import Student_Profile_Edit from './pages/StudentProfile/Student_Profile_Edit/Student_Profile_Edit'
 import CompanyLoggedInfree from './pages/companyLoggedInFree/companyLoggedInFree';
+import CompanyListingCreate from './users/companyListing/companyListingCreate/CompanyListingCreate';
+import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
 
 ReactDOM.render((
     <Provider store={store}>
@@ -28,7 +30,8 @@ ReactDOM.render((
                 <Header />
                 <Route exact path="/" component={App} />
                 <Route path="/logged_in_student" component={LoggedInStudent} />
-                <Route path="/company_listing_edit" component={CompanyListingEdit} />
+                <Route path="/company_listing_create" component={CompanyListingCreate} />
+                <Route path="/company_listing_edit/:id" component={CompanyListingEdit} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={RegisterPage} />

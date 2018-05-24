@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import {Authorization} from '../../../Components/Helper/Authorization';
 import Button_Danger from '../../../Components/Button/Button_Danger/Button_Danger';
 import Button_Function from '../../../Components/Button/Button_Function/Button_Function';
-import './CompanyListingEdit.css';
+import './CompanyListingCreate.css';
 
-class CompanyListingEdit extends React.Component {
+class CompanyListingCreate extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,7 +16,6 @@ class CompanyListingEdit extends React.Component {
             information_listing: '',
             intern_amount: '',
             role: 'company',
-            list_id: 0,
            
             errorMessages: []
         };
@@ -27,40 +26,99 @@ class CompanyListingEdit extends React.Component {
 
     componentDidMount() {
         Authorization(this);
-        this.setState({
-            list_id: this.props.match.params.id
-        });
-
-        axios.get(`${process.env.REACT_APP_API_BASE_URL}/listings/${this.props.match.params.id}`)
-        .then((res) => {
-            console.log(res.data);
-            this.setState({
-                title: res.data.title,
-                information_listing: res.data.information_listing,
-                intern_amount: res.data.intern_amount
-            });
-        })
-        .catch((error) => {
-            console.log(error);
-        });
     }
 
     onSubmit(event) {
         console.log('hejhehj');
         event.preventDefault();
 
-        axios.put(`${process.env.REACT_APP_API_BASE_URL}/listings/${this.state.list_id}`, {
-            "title": this.state.title,
-            "information_listing": this.state.information_listing,
-            "intern_amount": this.state.intern_amount
+        const errorMessages = [];
+
+        
+        if (this.state.title === '') {
+            errorMessages.push('Title is required');
+        }
+        if (this.state.information_listing === '') {
+            errorMessages.push('Task is required');
+        }
+        if (this.state.intern_amount === '') {
+            errorMessages.push('Amount of intern is required');
+        }
+       
+
+        this.setState({
+            errorMessages: errorMessages
+
+        });
+        const token = localStorage.getItem('token');
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/verify-token`, null,{
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
         })
+
         .then((res) => {
+            console.log('Hej 2');
             console.log(res.data);
-            this.props.history.push("/logged_in_company_free");
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/user-type/${res.data.userId}`)
+
+            .then((res2) => {
+                console.log('hej 3')
+                console.log(res2.data.id);
+                axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
+            
+            
+                    "title": this.state.title,
+                    "pub_date": new Date(),
+                    "information_listing": this.state.information_listing,
+                    "intern_amount": this.state.intern_amount,
+                    "company_id": res2.data.id 
+        
+                  
+              })
+              .then((res3) => {
+                console.log(res3);
+                this.props.history.push("/logged_in_company_free");
+              })
+              .catch((error3) => {
+                console.log(error3);
+              });
+            })
+
+            .catch((error2) => {
+                console.log(error2);
+            })
         })
+
         .catch((error) => {
             console.log(error);
-        });
+        })
+        
+
+        /*axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
+            
+            
+            "title": this.state.title,
+            "pub_date": new Date(),
+            "information_listing": this.state.information_listing,
+            "intern_amount": this.state.intern_amount,
+            "company_id": 
+
+            
+             
+            
+      },{
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
+      })
+      .then((response) => {
+        console.log(response,);
+      })
+      .catch((error) => {
+        console.log(error);
+      });*/
+
     }
 
     onChange(event) {
@@ -69,17 +127,13 @@ class CompanyListingEdit extends React.Component {
             [event.target.name]: event.target.value
         })
     }
-
-    onBreak() {
-        console.log('Gick in...');
-    }
     
     
     
 
     render() {
         return (
-            <div className="row">
+            <div className=" row">
                 <div className=" company-listings-edit col-8 mb-4 mt-5">
                     {this.state.errorMessages.map((error) => (
                         <div key={error}>{error}</div>
@@ -116,4 +170,4 @@ class CompanyListingEdit extends React.Component {
 
 }
 
-export default CompanyListingEdit;
+export default CompanyListingCreate;
