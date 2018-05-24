@@ -5,7 +5,7 @@ class Button_Danger extends React.Component {
     render() {
         return (
 
-            <button className="button-danger" onClick={this.props.button_danger_action}>{this.props.button_danger_content}</button>
+            <a href={this.props.url}><button className="button-danger" onClick={this.props.button_danger_action}>{this.props.button_danger_content}</button></a>
 
         )
     }

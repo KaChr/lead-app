@@ -1,12 +1,33 @@
 import React from 'react';
-import StudentExampleBanner from "../images/headerimage.jpg";
-import StudentExampleLogo from '../images/avatar-placeholder.png';
+import axios from 'axios';
 import './StudentProfile.css';
-import StudentProfileDescription from './StudentProfileDescription';
-import Button_Function from '..//..//Components/Button/Button_Function/Button_Function';
+import Button from '..//..//Components/Button/Button';
 
  
-class StudentProfile extends React.Component {
+class Student_Profile extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            studentProfileInfo: {}
+        };
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:7770/profile-students/1')
+            .then((ress) => {
+                console.log(ress);
+                this.setState({
+                    studentProfileInfo: ress.data
+                })
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+
+
     render() {
         return(
             <div className="studentProfile__container--height">
@@ -18,22 +39,31 @@ class StudentProfile extends React.Component {
                                 <div className="studentProfile__logo--2 col-5"></div>
                                     <div className="d-flex align-items-center">
                                         <ul className="col list-unstyled mr-8">
-                                            <li className="font-weight-bold">My Company</li>
-                                            <li>Stad: </li>
-                                            <li>Adress: </li>
-                                            <li>E-mail: </li>
-                                            <li>Hemsida: </li>
+                                            <li className="font-weight-bold">My Name</li>
+                                            <li><b>Skola</b>: {this.state.studentProfileInfo.current_school}</li>
+                                            <li><b>Utbildning</b>: {this.state.studentProfileInfo.education}</li>
+                                            <li><b>LIA</b>: {this.state.studentProfileInfo.intern_period_start} - {this.state.studentProfileInfo.intern_period_end}</li>
                                         </ul>
                                     </div>  
                             </div>
                         </div>                
                     </div>
-                    <StudentProfileDescription />
+                    <div className="ml-3 mr-3 pb-3">
+                        <h2>Om oss</h2>
+                        <div className="border container-medium mr-1 ">
+                            <div className="col-8">
+                                <p>{this.state.studentProfileInfo.description}</p>
+                                <br />
+                                <p><b>Kunskap</b>: {this.state.studentProfileInfo.knowledge}</p>
+                                <p><b>Skolperiod</b>: {this.state.studentProfileInfo.school_length}</p>
+                            </div>  
+                        </div>
+                        <Button url="/Student_Profile_Edit" name="Redigera Profil" />
+                    </div>
                 </div>
-                <Button_Function button_content="Redigera Profil" />
             </div>
         );
     }
 }
 
-export default StudentProfile;
+export default Student_Profile;
