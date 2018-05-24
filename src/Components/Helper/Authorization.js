@@ -4,7 +4,7 @@ import { STATUS_CODES } from 'http';
 export const Authorization = (thisParams) => {
 
     const token = localStorage.getItem('token');
-    axios.post('http://localhost:7770/verify-token', null, {
+    axios.post('REACT_APP_API_BASE_URL:7770/verify-token', null, {
         headers: {
             'Authorization': 'Bearer ' + token
         }
