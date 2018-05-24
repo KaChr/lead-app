@@ -70,7 +70,8 @@ class Login extends React.Component {
                                 if (res3.data.role === 'school') {
                                     this.props.history.push("/logged-in-school-profile");
 
-                                })
+                                }
+                            })
                             .catch((err3) => {
                                 console.log(err3);
                             })
