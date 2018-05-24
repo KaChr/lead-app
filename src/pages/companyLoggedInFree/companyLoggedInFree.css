@@ -1,0 +1,6 @@
+.companyLoggedInFreeBanner {
+    background-image: url(../images/companyExampleBanner_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
