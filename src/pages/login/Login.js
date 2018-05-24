@@ -62,13 +62,13 @@ class Login extends React.Component {
                                 console.log(res3.data);
                                 // IF ELSE HERE TO REDIRECT TO THE CORRECT PAGE
                                 if (res3.data.role === 'student') {
-                                    this.props.history.push("/logged-in-student");
+                                    this.props.history.push("/logged_in_student");
                                 }
                                 else if (res3.data.role === 'company') {
                                     this.props.history.push("/logged_in_campany_free");
                                 }
                                 else if (res3.data.role === 'school') {
-                                    this.props.history.push("/logged-in-school-profile");
+                                    this.props.history.push("/logged_in_school_profile");
 
                                 }
                             })
