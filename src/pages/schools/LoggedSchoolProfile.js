@@ -1,7 +1,13 @@
 import React from 'react';
 import './LoggedSchoolProfile.css';
+import { Authorization } from '../../Components/Helper/Authorization';
 
 class LoggedSchoolProfile extends React.Component {
+
+    componentDidMount() {
+        Authorization(this);
+    }
+
     render() {
         return (
             <div className="row logged-school-profile">
