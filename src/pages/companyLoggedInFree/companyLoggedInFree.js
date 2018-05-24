@@ -3,11 +3,15 @@ import './companyLoggedInFree.css';
 
 import Button from '../../Components/Button/Button';
 import '../../Components/Button/Button.css';
+import { Authorization } from '../../Components/Helper/Authorization';
 
 
 
 class companyLoggedInFree extends React.Component {
 
+    componentDidMount() {
+        Authorization(this);
+    }
 
     render() {
         return(
@@ -16,16 +20,11 @@ class companyLoggedInFree extends React.Component {
                     <div className="col-12 companyLoggedInFreeBanner"></div>
                     <div className="justify-content-center">
                     <Button url="/company_listing_edit" name="Lägg till annonser"/>
-                    
-                        
-                    </div>
-                    
-                    
-                    
+                    </div>  
                 </div>
-            <div className="">
-                <p>Dina annonser:</p>
-            </div>
+                <div className="">
+                    <p>Dina annonser:</p>
+                </div>
         </div>
         );
     }
