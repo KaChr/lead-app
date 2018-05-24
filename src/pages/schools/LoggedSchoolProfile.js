@@ -3,6 +3,12 @@ import './LoggedSchoolProfile.css';
 import { Authorization } from '../../Components/Helper/Authorization';
 
 class LoggedSchoolProfile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            role: 'school'
+        };
+    }
 
     componentDidMount() {
         Authorization(this);

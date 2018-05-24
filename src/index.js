@@ -25,14 +25,14 @@ ReactDOM.render((
             <div>
                 <Header />
                 <Route exact path="/" component={App} />
-                <Route path="/logged-in-student" component={LoggedInStudent} />
+                <Route path="/logged_in_student" component={LoggedInStudent} />
                 <Route path="/company_listing_edit" component={CompanyListingEdit} />
                 <Route path="/company_advertisement" component={CompanyAdvertisement} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={RegisterPage} />
                 <Route path="/profile_company_edit" component={ProfileCompanyEditPage} />
                 <Route path="/company_profile" component={CompanyProfile} />
-                <Route path="/logged-in-school-profile" component={LoggedSchoolProfile} />
+                <Route path="/logged_in_school_profile" component={LoggedSchoolProfile} />
                 <Route path="/studentProfile" component={StudentProfile} />
                 <Footer />
             </div>

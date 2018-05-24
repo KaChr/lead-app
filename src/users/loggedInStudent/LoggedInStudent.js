@@ -9,7 +9,12 @@ import SearchSection from '../searchSection/SearchSection';
 import { Authorization } from '../../Components/Helper/Authorization';
 
 class LoggedInStudent extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            role: 'student'
+        };
+    }
 
     componentDidMount() {
         Authorization(this);
