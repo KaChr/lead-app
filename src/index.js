@@ -21,7 +21,6 @@ import Student_Profile from './pages/StudentProfile/StudentProfile';
 import Student_Profile_Edit from './pages/StudentProfile/Student_Profile_Edit/Student_Profile_Edit'
 import CompanyLoggedInfree from './pages/companyLoggedInFree/companyLoggedInFree';
 import CompanyListingCreate from './users/companyListing/companyListingCreate/CompanyListingCreate';
-import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
 
 ReactDOM.render((
     <Provider store={store}>
