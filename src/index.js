@@ -16,7 +16,9 @@ import RegisterPage from './pages/register/RegisterPage';
 import ProfileCompanyEditPage from './pages/profileCompanyEditPage/ProfileCompanyEditPage';
 import CompanyProfile from './pages/companyProfile/CompanyProfile';
 import LoggedSchoolProfile from './pages/schools/LoggedSchoolProfile';
-import StudentProfile from './pages/StudentProfile/StudentProfile';
+import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
+import Student_Profile from './pages/StudentProfile/StudentProfile';
+import Student_Profile_Edit from './pages/StudentProfile/Student_Profile_Edit/Student_Profile_Edit'
 import CompanyLoggedInfree from './pages/companyLoggedInFree/companyLoggedInFree';
 import CompanyListingCreate from './users/companyListing/companyListingCreate/CompanyListingCreate';
 import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
@@ -35,8 +37,9 @@ ReactDOM.render((
                 <Route path="/register" component={RegisterPage} />
                 <Route path="/profile_company_edit" component={ProfileCompanyEditPage} />
                 <Route path="/company_profile" component={CompanyProfile} />
+                <Route path="/Student_Profile" component={Student_Profile} />
+                <Route path="/Student_Profile_Edit" component={Student_Profile_Edit} />
                 <Route path="/logged_in_school_profile" component={LoggedSchoolProfile} />
-                <Route path="/studentProfile" component={StudentProfile} />
                 <Route path="/logged_in_company_free" component={CompanyLoggedInfree} />
                 <Footer />
             </div>
