@@ -30,6 +30,7 @@
   height: 75vh;
   background-image: url("pages/images/adult-beard-business-845451.jpg");
   background-size: cover;
+  background-position: center;
   text-align: center;
 }
 
