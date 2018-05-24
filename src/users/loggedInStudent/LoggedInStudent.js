@@ -13,7 +13,6 @@ class LoggedInStudent extends React.Component {
 
     componentDidMount() {
         Authorization(this);
-        //console.log('Whatever sdfs dfasd fs df sdf sdf.....');
     }
 
     render() {

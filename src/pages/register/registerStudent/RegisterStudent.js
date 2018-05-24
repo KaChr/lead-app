@@ -12,6 +12,8 @@ class RegisterPage extends React.Component {
             email: "",
             password: "",
             social_security_number: "",
+            country_id: 1,
+            city_id: 1,
             errorMessages: []
         };
 
@@ -41,6 +43,23 @@ class RegisterPage extends React.Component {
         if (this.state.social_security_number === '') {
             errorMessages.push('Social security number name is required');
         }
+        axios.post(process.env.REACT_APP_API_BASE_URL + "/register-student", {
+
+            "first_name": this.state.first_name,
+            "last_name": this.state.last_name,
+            "email": this.state.email,
+            "password": this.state.password,
+            "social_security_number": this.state.social_security_number,
+            "country_id": this.state.country_id,
+            "city_id": this.state.city_id,
+        })
+
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
 
         this.setState({
             errorMessages: errorMessages
