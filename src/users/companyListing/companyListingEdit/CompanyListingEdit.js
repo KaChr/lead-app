@@ -67,7 +67,7 @@ class CompanyListingEdit extends React.Component {
             
             
                     "title": this.state.title,
-                    "pub_date":"2011-11-11",
+                    "pub_date": new Date(),
                     "information_listing": this.state.information_listing,
                     "intern_amount": this.state.intern_amount,
                     "company_id": res2.data.id 
