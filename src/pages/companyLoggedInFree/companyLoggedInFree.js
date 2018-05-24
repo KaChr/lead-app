@@ -10,11 +10,12 @@ import { Authorization } from '../../Components/Helper/Authorization';
 
 
 class companyLoggedInFree extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
-            companyListing : []
+            companyListing: [],
+            role: "company"
         }
 
     }
@@ -60,4 +61,4 @@ class companyLoggedInFree extends React.Component {
     }
 }
 
-    export default companyLoggedInFree;
+export default companyLoggedInFree;
