@@ -4,12 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-/*
-*, ::after, ::before {
-  box-sizing: unset !important;
-}
-*/
-
 
 /* Remove margin from all pages */
 .row {
