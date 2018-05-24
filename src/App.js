@@ -7,7 +7,6 @@ class App extends Component {
     return (
       <div className="landing-page">
         <div className="jumbotron">
-
           <h1 className="jumbo-tron-title">LIA-portalen</h1>
           <p className="jumbo-tron-description">Hitta din praktikplats lika lätt som ett, två, tre.</p>
           <Button_Function button_content="Börja nu!" />

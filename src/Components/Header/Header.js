@@ -14,7 +14,7 @@ const Header = () => {
 
                 <ul>
                     <li><Button url="/login" name="Login" /></li>
-                    <li><Button url="/" name="Register" /></li>
+                    <li><Button url="/register" name="Register" /></li>
                 </ul>
             </header>
         </div>
