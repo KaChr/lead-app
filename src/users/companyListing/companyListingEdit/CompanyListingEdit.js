@@ -9,13 +9,11 @@ class CompanyListingEdit extends React.Component {
         super(props);
 
         this.state = {
-            name: '',
+            
             title: '',
             information_listing: '',
             intern_amount: '',
-            city_name: '',
-            street_address: '',
-            email: '',
+           
             errorMessages: []
         };
 
@@ -29,9 +27,7 @@ class CompanyListingEdit extends React.Component {
 
         const errorMessages = [];
 
-        if (this.state.name === '') {
-            errorMessages.push('Company name is required');
-        }
+        
         if (this.state.title === '') {
             errorMessages.push('Title is required');
         }
@@ -41,31 +37,26 @@ class CompanyListingEdit extends React.Component {
         if (this.state.intern_amount === '') {
             errorMessages.push('Amount of intern is required');
         }
-        if (this.state.city_name === '') {
-            errorMessages.push('City name is required');
-        }
-        if (this.state.street_address === '') {
-            errorMessages.push('Adress is required');
-        }
-        if (this.state.email === '') {
-            errorMessages.push('Mail is required');
-        }
+       
 
         this.setState({
             errorMessages: errorMessages
 
         });
-
-        axios.post('http://localhost:7770/listings', {
+        const token = localStorage.getItem('token');
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
             
-            "name": this.state.name ,
+            
             "title": this.state.title,
             "information_listing": this.state.information_listing,
             "intern_amount": this.state.intern_amount,
-            "city_name": this.state.city_name,
-            "street_adress": this.state.street_address,
-            "email": this.state.email
             
+             
+            
+      },{
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
       })
       .then((response) => {
         console.log(response,);
@@ -94,9 +85,7 @@ class CompanyListingEdit extends React.Component {
                         <div key={error}>{error}</div>
                     ))}
                     <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
-                            <input onChange={this.onChange} value={this.state.name} type="name" className="form-control" name="name" id="companyName" placeholder="Företags namn..." />
-                        </div>
+                        
                         <div className="form-group">
                             <input onChange={this.onChange} value={this.state.title} type="title" className="form-control" name="title" id="title" placeholder="Titel..." />
                         </div>
@@ -108,15 +97,9 @@ class CompanyListingEdit extends React.Component {
                             <div className="form-group">
                                 <input onChange={this.onChange} value={this.state.intern_amount} type="platser" className="form-control" name="intern_amount" id="platser" placeholder="Antal platser..." />
                             </div>
-                            <div className="form-group">
-                                <input onChange={this.onChange} value={this.state.city} type="ort" className="form-control" name="city" id="ort" placeholder="Ort..." />
-                            </div>
-                            <div className="form-group">
-                                <input onChange={this.onChange} value={this.state.street_address} type="adress" className="form-control" name="street_address" id="adress" placeholder="Adress..." />
-                            </div>
-                            <div className="form-group">
-                                <input onChange={this.onChange} value={this.state.mail} type="mail" className="form-control" name="mail" id="mail" placeholder="Mail..." />
-                            </div>
+                            
+                           
+                            
 
                         </div>
 
