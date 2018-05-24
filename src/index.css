@@ -9,3 +9,9 @@ body {
   box-sizing: unset !important;
 }
 */
+
+
+/* Remove margin from all pages */
+.row {
+  margin-right: 0; 
+}
