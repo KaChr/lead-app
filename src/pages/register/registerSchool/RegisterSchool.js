@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 
 class RegisterSchool extends React.Component {
@@ -9,6 +10,8 @@ class RegisterSchool extends React.Component {
             name: "",
             email: "",
             password: "",
+            country_id: 1,
+            city_id: 1,
             errorMessages: []
         };
 
@@ -32,6 +35,21 @@ class RegisterSchool extends React.Component {
         if (this.state.password === '') {
             errorMessages.push('Password is required');
         }
+        axios.post(process.env.REACT_APP_API_BASE_URL + "/register-school", {
+
+            "name": this.state.name,
+            "email": this.state.email,
+            "password": this.state.password,
+            "country_id": this.state.country_id,
+            "city_id": this.state.city_id,
+        })
+
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
 
         this.setState({
             errorMessages: errorMessages
