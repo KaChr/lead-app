@@ -17,6 +17,7 @@ import CompanyProfile from './pages/companyProfile/CompanyProfile';
 import LoggedSchoolProfile from './pages/schools/LoggedSchoolProfile';
 import CompanyListingEdit from './users/companyListing/companyListingEdit/CompanyListingEdit';
 import StudentProfile from './pages/StudentProfile/StudentProfile';
+import CompanyLoggedInfree from './pages/companyLoggedInFree/companyLoggedInFree';
 
 ReactDOM.render((
     <Provider store={store}>
@@ -32,6 +33,7 @@ ReactDOM.render((
                 <Route path="/company_profile" component={CompanyProfile} />
                 <Route path="/logged-in-school-profile" component={LoggedSchoolProfile} />
                 <Route path="/studentProfile" component={StudentProfile} />
+                <Route path="/company_logged_in_free" component={CompanyLoggedInfree} />
                 <Footer />
             </div>
         </BrowserRouter>
