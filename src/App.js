@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Button_Function from './Components/Button/Button_Function/Button_Function';
+import Button from './Components/Button/Button';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="jumbotron">
           <h1 className="jumbo-tron-title">LIA-portalen</h1>
           <p className="jumbo-tron-description">Hitta din praktikplats lika lätt som ett, två, tre.</p>
-          <Button_Function button_content="Börja nu!" />
+          <Button name="Börja nu!" url="/register" />
         </div>
         <div className="row landing-page-easy-info">
           <div className="col-sm landing-page-easy-info_card">
