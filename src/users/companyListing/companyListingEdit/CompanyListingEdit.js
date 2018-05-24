@@ -43,13 +43,18 @@ class CompanyListingEdit extends React.Component {
             errorMessages: errorMessages
 
         });
+        
+
         const token = localStorage.getItem('token');
         axios.post(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
             
             
             "title": this.state.title,
+            "pub_date": new Date(),
             "information_listing": this.state.information_listing,
             "intern_amount": this.state.intern_amount,
+            "company_id": 
+
             
              
             
