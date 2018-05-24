@@ -60,7 +60,7 @@ class Login extends React.Component {
 
                             .then((res3) => {
                                 console.log(res3.data);
-                                // IF ELSE HERE TO REDIRECT TO THE CORRECT PAGE
+
                                 if (res3.data.role === 'student') {
                                     this.props.history.push("/logged-in-student");
                                 }
@@ -70,7 +70,8 @@ class Login extends React.Component {
                                 if (res3.data.role === 'school') {
                                     this.props.history.push("/logged-in-school-profile");
 
-                                })
+                                }
+                            })
                             .catch((err3) => {
                                 console.log(err3);
                             })
