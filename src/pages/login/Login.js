@@ -44,7 +44,7 @@ class Login extends React.Component {
             "password": this.state.password
         })
             .then((res) => {
-                //console.log(res.data)
+                console.log(res.data)
                 localStorage.setItem('token', res.data.token);
 
                 axios.post('http://localhost:7770/verify-token', null, {
@@ -62,13 +62,13 @@ class Login extends React.Component {
                                 console.log(res3.data);
                                 // IF ELSE HERE TO REDIRECT TO THE CORRECT PAGE
                                 if (res3.data.role === 'student') {
-                                    this.props.history.push("/logged-in-student");
+                                    this.props.history.push("/logged_in_student");
                                 }
-                                if (res3.data.role === 'company') {
+                                else if (res3.data.role === 'company') {
                                     this.props.history.push("/logged_in_campany_free");
                                 }
-                                if (res3.data.role === 'school') {
-                                    this.props.history.push("/logged-in-school-profile");
+                                else if (res3.data.role === 'school') {
+                                    this.props.history.push("/logged_in_school_profile");
 
                                 }
                             })
