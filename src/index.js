@@ -33,7 +33,7 @@ ReactDOM.render((
                 <Route path="/company_profile" component={CompanyProfile} />
                 <Route path="/logged-in-school-profile" component={LoggedSchoolProfile} />
                 <Route path="/studentProfile" component={StudentProfile} />
-                <Route path="/company_logged_in_free" component={CompanyLoggedInfree} />
+                <Route path="/logged_in_company_free" component={CompanyLoggedInfree} />
                 <Footer />
             </div>
         </BrowserRouter>
