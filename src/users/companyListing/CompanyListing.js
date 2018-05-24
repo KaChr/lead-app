@@ -16,7 +16,7 @@ class CompanyListing extends React.Component {
     }
 
     componentDidMount() {
-        Promise.all([axios.get('REACT_APP_API_BASE_URL/listings'), axios.get('hREACT_APP_API_BASE_URL/cities')])
+        Promise.all([axios.get(`${process.env.REACT_APP_API_BASE_URL}`), axios.get(`${process.env.REACT_APP_API_BASE_URL}`)])
             .then((results) => {
                 let lists = results[0].data;
                 let cities = results[1].data;
