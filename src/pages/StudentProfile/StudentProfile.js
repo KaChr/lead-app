@@ -42,7 +42,7 @@ class Student_Profile extends React.Component {
                                             <li className="font-weight-bold">My Name</li>
                                             <li><b>Skola</b>: {this.state.studentProfileInfo.current_school}</li>
                                             <li><b>Utbildning</b>: {this.state.studentProfileInfo.education}</li>
-                                            <li><b>LIA</b>: {this.state.studentProfileInfo.intern_period_start} - {this.state.studentProfileInfo.intern_period_end}</li>
+                                            <li><b>LIA period</b>: {this.state.studentProfileInfo.intern_period_start} - {this.state.studentProfileInfo.intern_period_end}</li>
                                         </ul>
                                     </div>  
                             </div>
@@ -54,7 +54,7 @@ class Student_Profile extends React.Component {
                             <div className="col-8">
                                 <p>{this.state.studentProfileInfo.description}</p>
                                 <br />
-                                <p><b>Kunskap</b>: {this.state.studentProfileInfo.knowledge}</p>
+                                <p><b>Kunskaper</b>: {this.state.studentProfileInfo.knowledge}</p>
                                 <p><b>Skolperiod</b>: {this.state.studentProfileInfo.school_length}</p>
                             </div>  
                         </div>

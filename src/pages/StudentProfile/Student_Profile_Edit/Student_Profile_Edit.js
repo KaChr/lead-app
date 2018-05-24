@@ -1,6 +1,6 @@
 import React from 'react';
-import Button_Function from '..//..//..//Components/Button/Button_Function/Button_Function';
-import Button_Danger from '../../../Components/Button/Button_Danger/Button_Danger';
+import Button_Function from '../../../Components/Button/Button_Function/Button_Function';
+import Button from '../../../Components/Button/Button';
 
 class Student_Profile_Edit extends React.Component {
     render() {
@@ -13,32 +13,27 @@ class Student_Profile_Edit extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Adress:</label>
+                        <label>Skola:</label>
                         <input type="text" className="form-control" />
                     </div>
 
                     <div className="form-group">
-                        <label>E-mail:</label>
+                        <label>Utbildning:</label>
                         <input type="text" className="form-control" />
                     </div>
 
                     <div className="form-group">
-                        <label>Hemsida:</label>
+                        <label>LIA period:</label>
                         <input type="text" className="form-control" />
                     </div>
 
                     <div className="form-group">
-                        <label>Hemsida:</label>
+                        <label>Kunskaper:</label>
                         <input type="text" className="form-control" />
                     </div>
 
                     <div className="form-group">
-                        <label>Hemsida:</label>
-                        <input type="text" className="form-control" />
-                    </div>
-
-                    <div className="form-group">
-                        <label>Hemsida:</label>
+                        <label>Skolperiod:</label>
                         <input type="text" className="form-control" />
                     </div>
 
@@ -54,7 +49,7 @@ class Student_Profile_Edit extends React.Component {
                     </div>
 
                     <Button_Function button_content="Spara" />
-                    <Button_Danger url="/login" button_danger_content="Avbryt" />
+                    <Button url="../Student_Profile" name="Avbryt" />
                 </div>
             </form>
         );

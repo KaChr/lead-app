@@ -5,7 +5,7 @@ class Button_Function extends React.Component {
     render() {
         return (
 
-            <button className="button_function" onClick={this.props.button_action}>{this.props.button_content}</button>
+            <button href={this.props.url} className="button_function" onClick={this.props.button_action}>{this.props.button_content}</button>
 
         )
     }
