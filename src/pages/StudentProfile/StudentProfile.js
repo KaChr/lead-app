@@ -3,6 +3,7 @@ import StudentExampleBanner from "../images/headerimage.jpg";
 import StudentExampleLogo from '../images/avatar-placeholder.png';
 import './StudentProfile.css';
 import StudentProfileDescription from './StudentProfileDescription';
+import Button_Function from '..//..//Components/Button/Button_Function/Button_Function';
 
  
 class StudentProfile extends React.Component {
@@ -12,10 +13,6 @@ class StudentProfile extends React.Component {
                 <div className="studentProfile__banner"></div>
                 <div className="container shadow student-profile__container ">
                     <div className="row border-bottom">
-                        {/* <div className="col-4">
-                            <img className
-                            ="studentProfile__logo" src={companyExampleLogo}/>
-                        </div> */}
                         <div className="container" >
                             <div className="row">
                                 <div className="studentProfile__logo--2 col-5"></div>
@@ -33,6 +30,7 @@ class StudentProfile extends React.Component {
                     </div>
                     <StudentProfileDescription />
                 </div>
+                <Button_Function button_content="Redigera Profil" />
             </div>
         );
     }
