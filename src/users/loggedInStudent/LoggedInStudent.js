@@ -3,7 +3,6 @@ import './LoggedInStudent.css';
 import CompanyListing from '../companyListing/CompanyListing';
 import CompanyAdvertisement from '../../companies/CompanyAdvertisement';
 import ModalWindow from '../../modalWindow/ModalWindow';
-import Pagination from '../pagination/Pagination';
 import FilterListing from '../filterListing/FilterListing';
 import SearchSection from '../searchSection/SearchSection';
 import { Authorization } from '../../Components/Helper/Authorization';
@@ -30,7 +29,6 @@ class LoggedInStudent extends React.Component {
                 <SearchSection />
                 <FilterListing />
                 <CompanyListing />
-                <Pagination />
                 <ModalWindow component={<CompanyAdvertisement />} />
             </div>
         );
