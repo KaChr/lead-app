@@ -19,6 +19,7 @@ export const Authorization = (thisParams) => {
                     console.log('Här kollas usertypeID');
                     console.log(res2);
                     if (thisParams.state.role !== res2.data.role) {
+                        localStorage.removeItem('token');
                         thisParams.props.history.push("/");
                         console.log('Acces denied, you dont have permision Biiiiaaaaaatch!');
                     }
@@ -29,7 +30,9 @@ export const Authorization = (thisParams) => {
         })
         .catch((err) => {
             console.log(err);
+            localStorage.removeItem('token');
             thisParams.props.history.push("/register");
+            
         })
 
 }

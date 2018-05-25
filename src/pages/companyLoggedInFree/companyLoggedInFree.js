@@ -37,7 +37,11 @@ class companyLoggedInFree extends React.Component {
             .then((res) => {
                 console.log('Hej 1');
                 console.log(res.data);
-                axios.get(`${process.env.REACT_APP_API_BASE_URL}/company-listings/${res.data.userId}`)
+                axios.get(`${process.env.REACT_APP_API_BASE_URL}/company-listings/${res.data.userId}`, {
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
                 .then((res2) => {
                     console.log('Hej 2');
                     console.log(res2.data.Company.Listings);
@@ -58,14 +62,20 @@ class companyLoggedInFree extends React.Component {
 
     onDelete(event) {
         console.log(event);
-        axios.delete(`${process.env.REACT_APP_API_BASE_URL}/listings/${event}`)
+        const token = localStorage.getItem('token');
+        console.log(token);
+        axios.delete(`${process.env.REACT_APP_API_BASE_URL}/listings/${event}`, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
         .then((res) => {
             console.log(res.data);
             /*this.setState({
                 companyListing: 
             });*/
             // ***************
-            const token = localStorage.getItem('token');
+            //const token = localStorage.getItem('token');
             console.log(token);
 
             axios.post(`${process.env.REACT_APP_API_BASE_URL}/verify-token`, null, {
@@ -77,7 +87,11 @@ class companyLoggedInFree extends React.Component {
                 .then((res2) => {
                     console.log('Hej 1');
                     console.log(res.data);
-                    axios.get(`${process.env.REACT_APP_API_BASE_URL}/company-listings/${res2.data.userId}`)
+                    axios.get(`${process.env.REACT_APP_API_BASE_URL}/company-listings/${res2.data.userId}`, {
+                        headers: {
+                            'Authorization': 'Bearer ' + token
+                        }
+                    })
                     .then((res3) => {
                         console.log('Hej 2');
                         console.log(res3.data.Company.Listings);

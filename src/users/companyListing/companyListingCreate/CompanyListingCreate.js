@@ -60,7 +60,11 @@ class CompanyListingCreate extends React.Component {
         .then((res) => {
             console.log('Hej 2');
             console.log(res.data);
-            axios.get(`${process.env.REACT_APP_API_BASE_URL}/user-type/${res.data.userId}`)
+            axios.get(`${process.env.REACT_APP_API_BASE_URL}/user-type/${res.data.userId}`, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
 
             .then((res2) => {
                 console.log('hej 3')
@@ -75,7 +79,11 @@ class CompanyListingCreate extends React.Component {
                     "company_id": res2.data.id 
         
                   
-              })
+              }, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
               .then((res3) => {
                 console.log(res3);
                 this.props.history.push("/logged_in_company_free");
