@@ -1,0 +1,15 @@
+.button_function {
+    text-decoration: none;
+    padding: 3px 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ededed;
+    background: #3fdd39;
+    background: linear-gradient(90deg, rgb(63, 221, 57) 0%, rgb(47, 178, 42) 100%,rgb(46, 140, 33) 100%);
+    border-radius: 2px;
+    box-shadow: 0px 10px 35px -8px #3fdd39;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}

@@ -1,0 +1,69 @@
+.company-listing-main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.company-listing-city {
+    font-size: 14px;
+}
+
+.company-listing-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.company-listing-intern-positions {
+    font-size: 12px;
+}
+
+.company-listing-bold {
+    font-weight: bold;
+}
+
+.company-listing-background-yellow {
+    color: yellow;
+}
+
+.company-listing-icon {
+    font-size: 16px;
+    color: red;
+}
+
+.company-listing-link {
+    color: blue;
+    cursor: pointer;
+}
+
+.company-listing-link:hover {
+    text-decoration: underline;
+}
+
+.company-listing-logo-dimension {
+    width: 50px;
+    height: 50px;
+}
+
+.company-listing-text-center {
+    text-align: left;
+}
+
+.company-listing-text-justify {
+    text-align: justify;
+}
+
+.company-listing-max-text-length {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 575px) {
+    .company-listing-text-center {
+        text-align: center;
+    }
+
+    .company-listing-max-text-length {
+        width: 120px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,30 @@
+.bg-transparent-black-register {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: auto; 
+}
+
+.type-of-user-text {
+    text-align: center;
+}
+
+.type-of-user ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.type-of-user ul li {
+    display: inline
+}
+
+.type-of-user button:after {
+    background-color: green;
+}
+
+@media only screen and (max-width: 760px) {
+    .align-items-center {
+       align-items: none; 
+    }
+    
+}

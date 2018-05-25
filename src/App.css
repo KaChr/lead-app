@@ -26,11 +26,16 @@
   font-size: 14px;
 }
 
-.jumbo-tron {
+.jumbotron {
   height: 75vh;
-  background-image: url("images/adult-beard-business-845451.jpg");
+  background-image: url("pages/images/adult-beard-business-845451.jpg");
   background-size: cover;
+  background-position: center;
   text-align: center;
+}
+
+.jumbo-tron-title {
+  padding: 10vh;
 }
 
 .jumbo-tron-description {
@@ -39,13 +44,17 @@
 
 .landing-page-easy-info_card{
   text-align: center;
-  margin: 10px;
+  margin: 10vh;
 }
 
 .landing-page-easy-info-premium {
   background-color: #DBD1B9;
 }
 
+.page-list {
+  margin: 0;
+  text-align: left;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

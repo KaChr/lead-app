@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.logged-school-profile {
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+.logged-school-profile-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logged-school-profile-background {
+    background-color: #797979;
+    border: solid #4f4f4f 5px;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+.logged-school-profile-darker-background {
+    background-color: #4f4f4f;
+}
+
+.logged-school-profile-center-text {
+    float: none;
+    margin: 0 auto;
+}
+
+.logged-school-profile-height {
+    height: 300px;
+}
+
+.logged-school-profile-verify-height {
+    height: 105px;
+}
+
+.logged-school-profile-background-green.btn-success {
+    background-color: #00e497;
+}
+
+.logged-school-profile-background-green.btn-success:hover {
+    background-color: #00e497;
+}
+
+.logged-school-profile-background-red.btn-danger {
+    background-color: #ff6546;
+}
+
+.logged-school-profile-background-red.btn-danger:hover {
+    background-color: #ff6546;
+}
+
+.logged-school-profile-scroll {
+    overflow-x: hidden;
+}
