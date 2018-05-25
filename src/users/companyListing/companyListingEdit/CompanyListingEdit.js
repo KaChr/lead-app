@@ -31,7 +31,12 @@ class CompanyListingEdit extends React.Component {
             list_id: this.props.match.params.id
         });
 
-        axios.get(`${process.env.REACT_APP_API_BASE_URL}/listings/${this.props.match.params.id}`)
+        const token = localStorage.getItem('token');
+        axios.get(`${process.env.REACT_APP_API_BASE_URL}/listings/${this.props.match.params.id}`, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
         .then((res) => {
             console.log(res.data);
             this.setState({
@@ -49,10 +54,15 @@ class CompanyListingEdit extends React.Component {
         console.log('hejhehj');
         event.preventDefault();
 
+        const token = localStorage.getItem('token');
         axios.put(`${process.env.REACT_APP_API_BASE_URL}/listings/${this.state.list_id}`, {
             "title": this.state.title,
             "information_listing": this.state.information_listing,
             "intern_amount": this.state.intern_amount
+        }, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
         })
         .then((res) => {
             console.log(res.data);
@@ -69,14 +79,7 @@ class CompanyListingEdit extends React.Component {
             [event.target.name]: event.target.value
         })
     }
-
-    onBreak() {
-        console.log('Gick in...');
-    }
     
-    
-    
-
     render() {
         return (
             <div className="row">

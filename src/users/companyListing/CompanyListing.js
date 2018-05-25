@@ -16,7 +16,16 @@ class CompanyListing extends React.Component {
     }
 
     componentDidMount() {
-        Promise.all([axios.get(`${process.env.REACT_APP_API_BASE_URL}`), axios.get(`${process.env.REACT_APP_API_BASE_URL}`)])
+        const token = localStorage.getItem('token');
+        Promise.all([axios.get(`${process.env.REACT_APP_API_BASE_URL}/listings`, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        }), axios.get(`${process.env.REACT_APP_API_BASE_URL}/cities`, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })])
             .then((results) => {
                 let lists = results[0].data;
                 let cities = results[1].data;
