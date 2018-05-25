@@ -5,7 +5,6 @@ import './StudentProfile.css';
 import Button from '..//..//Components/Button/Button';
 import { Authorization } from '../../Components/Helper/Authorization'; 
 
- 
 class Student_Profile extends React.Component {
 
     constructor(props) {
@@ -78,7 +77,7 @@ class Student_Profile extends React.Component {
 
 
     render() {
-        return(
+        return (
             <div className="studentProfile__container--height">
                 <div className="studentProfile__banner"></div>
                 <div className="container shadow student-profile__container ">
@@ -95,7 +94,7 @@ class Student_Profile extends React.Component {
                                         </ul>
                                     </div>  
                             </div>
-                        </div>                
+                        </div>
                     </div>
                     <div className="ml-3 mr-3 pb-3">
                         <h2>Om oss</h2>
